@@ -19,10 +19,6 @@ import {
 
 import { featuredMovies } from "../lib/mockData";
 
-const plataforms = {
-  netflix: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
-}
-
 // Rating component
 const Rating = ({ rating }: { rating: number }) => {
   return (
@@ -38,7 +34,6 @@ const Rating = ({ rating }: { rating: number }) => {
     </div>
   );
 };
-
 
 const selectMovie = {
   id: 2,

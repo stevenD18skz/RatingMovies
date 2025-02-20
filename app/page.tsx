@@ -18,8 +18,6 @@ import {
   Calendar,
   Clock,
   Film,
-  Award,
-  Trophy,
   Monitor,
   Search,
   LayoutGrid,
@@ -314,7 +312,8 @@ function App() {
           // List View
           <div className="space-y-6">
             {paginatedMovies.map((movie) => (
-              <div
+              <a
+                href="/movie"
                 key={movie.id}
                 className="group bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 ease-out shadow-xl hover:shadow-2xl"
               >
@@ -371,7 +370,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         )}
@@ -521,7 +520,7 @@ function App() {
         </div>
       </section>
 
-      {/* Footer 
+      {/* Footer */}
       <footer className="bg-gray-900 pt-16 pb-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -549,17 +548,10 @@ function App() {
                     href="#"
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2"
                   >
-                    <Film className="w-4 h-4" /> Estrenos
+                    <Film className="w-4 h-4" /> Peliculas
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2"
-                  >
-                    <Award className="w-4 h-4" /> Premios
-                  </a>
-                </li>
+
                 <li>
                   <a
                     href="#"
@@ -657,7 +649,7 @@ function App() {
             </div>
           </div>
         </div>
-      </footer>*/}
+      </footer>
     </div>
   );
 }
