@@ -15,9 +15,11 @@ import {
   Building2,
   Pencil,
   Clapperboard,
+  ArrowUpRightIcon,
 } from "lucide-react";
 
 import { featuredMovies } from "../lib/mockData";
+import Link from "next/link";
 
 // Rating component
 const Rating = ({ rating }: { rating: number }) => {
@@ -54,7 +56,7 @@ const selectMovie = {
   classification: "PG-13",
   reviews: [
     {
-      user: "MovieBuff2024",
+      user: "Monke D. Luffy",
       rating: 5,
       date: "March 15, 2024",
       content:
@@ -62,10 +64,10 @@ const selectMovie = {
       likes: 234,
       replies: 45,
       avatar:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
+        "https://i.pinimg.com/736x/75/b8/b7/75b8b7cd70cfa5c569154a646a2f716d.jpg",
     },
     {
-      user: "CinematicArt",
+      user: "Roronoa Zoro",
       rating: 4,
       date: "March 10, 2024",
       content:
@@ -73,10 +75,10 @@ const selectMovie = {
       likes: 186,
       replies: 28,
       avatar:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
+        "https://i.pinimg.com/originals/a3/2c/94/a32c947afd620ba53de48a21b29fad64.jpg",
     },
     {
-      user: "SciFiLover",
+      user: "Vinksmoke Sanji",
       rating: 5,
       date: "March 5, 2024",
       content:
@@ -84,7 +86,7 @@ const selectMovie = {
       likes: 152,
       replies: 31,
       avatar:
-        "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
+        "https://i.pinimg.com/736x/16/4c/f5/164cf5c5931c4ac7ff36f43cc829f594.jpg",
     },
   ],
   castMembers: [
@@ -284,13 +286,9 @@ function page() {
             <section className="mb-12">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold">User Reviews</h2>
-                <div className="flex items-center gap-4">
-                  <span className="text-gray-400">Sort by:</span>
-                  <select className="bg-gray-800 text-white rounded-lg px-3 py-1 border border-gray-700">
-                    <option>Most Recent</option>
-                    <option>Highest Rated</option>
-                    <option>Most Helpful</option>
-                  </select>
+                <div className="flex items-center  hover:text-blue-400 transition-all duration-300 hover:underline hover:scale-105">
+                  <a href="/punctuation">View All</a>
+                  <ArrowUpRightIcon></ArrowUpRightIcon>
                 </div>
               </div>
               <div className="space-y-6">
@@ -307,7 +305,7 @@ function page() {
                           className="w-12 h-12 rounded-full border-2 border-blue-500"
                         />
                         <div>
-                          <h3 className="font-semibold text-lg text-blue-400">
+                          <h3 className="font-semibold text-lg text-gray-100">
                             {review.user}
                           </h3>
                           <p className="text-sm text-gray-400">{review.date}</p>
@@ -473,9 +471,9 @@ function page() {
         <section className="mt-16">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold">Similar Movies</h2>
-            <button className="text-blue-600 flex items-center gap-1">
+            <Link href="/" className="text-blue-600 flex items-center gap-1">
               View All <ChevronRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
           <div className="grid grid-cols-6 gap-4">
             {selectMovie.similarMovies.map((movie, index) => (
@@ -484,7 +482,7 @@ function page() {
                   <img
                     src={movie.image}
                     alt={movie.title}
-                    className="rounded-lg"
+                    className="rounded-lg w-full h-full"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <Play className="w-8 h-8" />

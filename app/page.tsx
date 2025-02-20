@@ -35,6 +35,7 @@ import {
   genres,
   years,
 } from "./lib/mockData";
+import Link from "next/link";
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -254,7 +255,7 @@ function App() {
           // Grid View
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {paginatedMovies.map((movie) => (
-              <a
+              <Link
                 key={movie.id}
                 href="/movie"
                 className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden transform hover:scale-[1.03] transition-all duration-500 ease-out shadow-xl hover:shadow-2xl"
@@ -305,14 +306,14 @@ function App() {
                     </button>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         ) : (
           // List View
           <div className="space-y-6">
             {paginatedMovies.map((movie) => (
-              <a
+              <Link
                 href="/movie"
                 key={movie.id}
                 className="group bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 ease-out shadow-xl hover:shadow-2xl"
@@ -370,7 +371,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         )}
@@ -458,7 +459,7 @@ function App() {
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl shadow-xl">
               <div className="flex items-center gap-3 mb-6">
                 <Flame className="w-6 h-6 text-red-500" />
-                <h3 className="text-2xl font-bold">Reseñas Más Leídas</h3>
+                <h3 className="text-2xl font-bold">Estrenos Recientes</h3>
               </div>
               <div className="space-y-6">
                 {recentMovies.map((movie) => (
