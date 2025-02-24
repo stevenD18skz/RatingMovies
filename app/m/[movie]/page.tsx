@@ -18,7 +18,7 @@ import {
   ArrowUpRightIcon,
 } from "lucide-react";
 
-import { featuredMovies } from "../lib/mockData";
+import { featuredMovies } from "../../lib/mockData";
 import Link from "next/link";
 
 // Rating component
@@ -37,157 +37,29 @@ const Rating = ({ rating }: { rating: number }) => {
   );
 };
 
-const selectMovie = {
-  id: 2,
-  title: "Ready Player One",
-  rating: 4.2,
-  image:
-    "https://th.bing.com/th/id/OIP.c0q6NJYlJ3xK9UAj72yMFAHaLH?rs=1&pid=ImgDetMain",
-  genre: ["Acción", "Aventura", "Ciencia ficción"],
-  year: 2018,
-  preview:
-    "Cuando el creador de un popular videojuego de realidad virtual muere, lanza un concurso póstumo en el que el ganador heredará su fortuna.",
-  summary:
-    " In the year 2045, the real world is a harsh place. The only time Wade Watts (Tye Sheridan) truly feels alive is when he escapes to the OASIS, an immersive virtual universe where most of humanity spends their days. In the OASIS, you can go anywhere, do anything, be anyone—the only limits are your own imagination. The OASIS was created by the brilliant and eccentric James Halliday (Mark Rylance), who left his immense fortune and total control of the OASIS to the winner of a three-part contest he designed to find a worthy heir. When Wade conquers the first challenge of the reality-bending treasure hunt, he and his friends—known as the High Five—are hurled into a fantastical universe of discovery and danger to save the OASIS and their world.",
-  director: "Steven Spielberg",
-  writer: "Zak Penn, Ernest Cline",
-  distributor: "Warner Bros. Pictures",
-  duration: "140 min",
-  classification: "PG-13",
-  reviews: [
-    {
-      user: "Monke D. Luffy",
-      rating: 5,
-      date: "March 15, 2024",
-      content:
-        "A visual masterpiece that perfectly captures the spirit of gaming culture. Spielberg's direction brings the virtual world to life in spectacular fashion.",
-      likes: 234,
-      replies: 45,
-      avatar:
-        "https://i.pinimg.com/736x/75/b8/b7/75b8b7cd70cfa5c569154a646a2f716d.jpg",
-    },
-    {
-      user: "Roronoa Zoro",
-      rating: 4,
-      date: "March 10, 2024",
-      content:
-        "While the references might be overwhelming for some, the heart of the story shines through. The OASIS is a technical achievement in visual effects.",
-      likes: 186,
-      replies: 28,
-      avatar:
-        "https://i.pinimg.com/originals/a3/2c/94/a32c947afd620ba53de48a21b29fad64.jpg",
-    },
-    {
-      user: "Vinksmoke Sanji",
-      rating: 5,
-      date: "March 5, 2024",
-      content:
-        "An incredible journey that blends nostalgia with cutting-edge visuals. The race scene alone is worth the price of admission.",
-      likes: 152,
-      replies: 31,
-      avatar:
-        "https://i.pinimg.com/736x/16/4c/f5/164cf5c5931c4ac7ff36f43cc829f594.jpg",
-    },
-  ],
-  castMembers: [
-    {
-      name: "Tye Sheridan",
-      character: "Wade Watts / Parzival",
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
-    },
-    {
-      name: "Olivia Cooke",
-      character: "Samantha Cook / Art3mis",
-      image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
-    },
-    {
-      name: "Ben Mendelsohn",
-      character: "Nolan Sorrento",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
-    },
-    {
-      name: "Mark Rylance",
-      character: "James Halliday / Anorak",
-      image:
-        "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
-    },
-  ],
-  mediaGallery: [
-    {
-      type: "scene",
-      title: "OASIS Virtual World",
-      image: "https://i.ytimg.com/vi/-JgIslfYajI/maxresdefault.jpg",
-    },
-    {
-      type: "behind",
-      title: "Motion Capture Session",
-      image:
-        "https://images.unsplash.com/photo-1578632767115-351597cf2477?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200",
-    },
-    {
-      type: "scene",
-      title: "Race Scene",
-      image:
-        "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200",
-    },
-  ],
-  streamingPlatforms: [
-    {
-      name: "Netflix",
-      logo: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
-      color: "from-red-700 to-red-900",
-      available: true,
-    },
-    {
-      name: "HBO Max",
-      logo: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
-      color: "from-purple-700 to-purple-900",
-      available: true,
-    },
-    {
-      name: "Amazon Prime",
-      logo: "https://images.unsplash.com/photo-1553545204-4f7d339aa06a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
-      color: "from-blue-600 to-blue-800",
-      available: true,
-    },
-    {
-      name: "Disney+",
-      logo: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
-      color: "from-blue-700 to-blue-900",
-      available: false,
-    },
-    {
-      name: "Paramount+",
-      logo: "https://images.unsplash.com/photo-1627873649417-c67c5215e3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
-      color: "from-blue-800 to-blue-950",
-      available: false,
-    },
-  ],
+async function MovieDetail({ params }: { params: { movie: string } }) {
+  const titleSelectMovie = decodeURIComponent(params.movie); // Decodifica el título
+  const selectMovie = featuredMovies.find(
+    (mo) => mo.title === titleSelectMovie
+  );
 
-  Awards: [
-    {
-      type: "trophy",
-      name: "Academy Award Nomination - Visual Effects",
-    },
-    {
-      type: "award",
-      name: "BAFTA Award - Special Visual Effects",
-    },
-  ],
-  similarMovies: [
-    featuredMovies[0],
-    featuredMovies[1],
-    featuredMovies[2],
-    featuredMovies[3],
-    featuredMovies[4],
-    featuredMovies[5],
-  ],
-};
+  if (!selectMovie) {
+    return (
+      <div>
+        <p>eso no existe {titleSelectMovie}</p>
+      </div>
+    );
+  }
 
-function page() {
+  const similarMovies = selectMovie.genre
+    .slice(0, 1)
+    .map((g) => {
+      return featuredMovies.filter((m) => m.genre.includes(g));
+    })[0]
+    .slice(0, 6);
+
+  console.log(similarMovies);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -195,7 +67,7 @@ function page() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(${selectMovie.image})`,
+            backgroundImage: `url(${selectMovie.heroposter})`,
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" />
@@ -204,7 +76,7 @@ function page() {
         <div className="container mx-auto px-4 relative h-full flex items-end pb-16">
           <div className="flex gap-8 items-end">
             <img
-              src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/7852c263080025.5aa583fb8d04a.jpg"
+              src={selectMovie.poster}
               alt="Ready Player One Poster"
               className="w-64 rounded-lg shadow-2xl"
             />
@@ -292,7 +164,7 @@ function page() {
                 </div>
               </div>
               <div className="space-y-6">
-                {selectMovie.reviews.map((review, index) => (
+                {selectMovie.reviews?.map((review, index) => (
                   <div
                     key={index}
                     className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg p-6 shadow-xl hover:shadow-2xl transition-all duration-300"
@@ -343,7 +215,7 @@ function page() {
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6">Cast & Crew</h2>
               <div className="grid grid-cols-4 gap-4">
-                {selectMovie.castMembers.map((member, index) => (
+                {selectMovie.castMembers?.map((member, index) => (
                   <div key={index} className="text-center">
                     <img
                       src={member.image}
@@ -360,7 +232,7 @@ function page() {
             <section>
               <h2 className="text-2xl font-bold mb-6">Media</h2>
               <div className="grid grid-cols-3 gap-4">
-                {selectMovie.mediaGallery.map((item, index) => (
+                {selectMovie.mediaGallery?.map((item, index) => (
                   <div key={index} className="relative group cursor-pointer">
                     <img
                       src={item.image}
@@ -415,7 +287,7 @@ function page() {
             <div className="bg-gray-800 rounded-lg p-6 mb-6">
               <h3 className="text-xl font-bold mb-4">Awards</h3>
               <div className="space-y-4">
-                {selectMovie.Awards.map((award, index) => (
+                {selectMovie.Awards?.map((award, index) => (
                   <div key={index} className="flex items-center gap-3">
                     {award.type === "trophy" ? (
                       <Trophy className="w-8 h-8 text-yellow-400" />
@@ -430,8 +302,8 @@ function page() {
 
             <div className="bg-gray-800 rounded-lg p-6">
               <h3 className="text-xl font-bold mb-6">Where to Watch</h3>
-              <div className="grid grid-cols-3 gap-4">
-                {selectMovie.streamingPlatforms.map((platform, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                {selectMovie.streamingPlatforms?.map((platform, index) => (
                   <div key={index} className="text-center">
                     <div className={`relative group cursor-pointer`}>
                       <div
@@ -476,11 +348,11 @@ function page() {
             </Link>
           </div>
           <div className="grid grid-cols-6 gap-4">
-            {selectMovie.similarMovies.map((movie, index) => (
+            {similarMovies.map((movie, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="relative mb-2">
                   <img
-                    src={movie.image}
+                    src={movie.poster}
                     alt={movie.title}
                     className="rounded-lg w-full h-full"
                   />
@@ -501,4 +373,4 @@ function page() {
   );
 }
 
-export default page;
+export default MovieDetail;

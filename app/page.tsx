@@ -96,7 +96,7 @@ function App() {
                 key={movie.id}
                 className="relative w-full h-full"
                 style={{
-                  backgroundImage: `url(${movie.image})`,
+                  backgroundImage: `url(${movie.heroposter})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -179,13 +179,14 @@ function App() {
       {/* Main Content */}
       <section className="container mx-auto px-4 py-16">
         <div className="mb-12">
-          <div className="flex justify-between items-end mb-8">
+          <div className="lg:flex lg:space-y-4 justify-between items-end mb-8">
             <div>
               <h4 className="text-red-500 font-medium mb-2">
                 Nuestras Recomendaciones
               </h4>
               <h2 className="text-4xl font-bold">Películas Populares</h2>
             </div>
+
             <div className="flex items-center gap-4">
               {/* View Toggle */}
               <div className="flex items-center bg-gray-800 rounded-lg p-1">
@@ -257,12 +258,12 @@ function App() {
             {paginatedMovies.map((movie) => (
               <Link
                 key={movie.id}
-                href="/movie"
+                href={`/m/${movie.title}`}
                 className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden transform hover:scale-[1.03] transition-all duration-500 ease-out shadow-xl hover:shadow-2xl"
               >
                 <div className="relative h-[400px] overflow-hidden">
                   <img
-                    src={movie.image}
+                    src={movie.poster}
                     alt={movie.title}
                     className="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700 ease-out"
                   />
@@ -321,7 +322,7 @@ function App() {
                 <div className="flex">
                   <div className="relative w-64 overflow-hidden">
                     <img
-                      src={movie.image}
+                      src={movie.poster}
                       alt={movie.title}
                       className="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700 ease-out"
                     />
@@ -465,7 +466,7 @@ function App() {
                 {recentMovies.map((movie) => (
                   <div key={movie.id} className="flex gap-4 items-start">
                     <img
-                      src={movie.image}
+                      src={movie.poster}
                       alt={movie.title}
                       className="w-24 h-24 rounded-lg object-cover"
                     />
@@ -492,7 +493,7 @@ function App() {
                 {nextsMovies.reverse().map((movie) => (
                   <div key={movie.id} className="flex gap-4 items-start">
                     <img
-                      src={movie.image}
+                      src={movie.poster}
                       alt={movie.title}
                       className="w-24 h-24 rounded-lg object-cover"
                     />

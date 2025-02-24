@@ -3,36 +3,275 @@ export const featuredMovies = [
   {
     id: 1,
     title: "Poor Things",
-    rating: 4.5,
-    image:
-      "https://th.bing.com/th/id/OIP.nJRdTXTLjs4qOs0BAF5-RQHaK-?rs=1&pid=ImgDetMain",
-    genre: ["Drama", "Sci-Fi", "Romance"],
-    year: 2024,
+    rating: 7.9,
+    heroposter:
+      "https://images.bauerhosting.com/empire/2023/07/poor-things.jpg?ar=16:9&fit=crop&crop=top&auto=format&w=1440&q=80",
+    poster:
+      "https://i.pinimg.com/originals/76/71/5e/76715ecff73dbd26359a6216966eede4.jpg",
+    genre: ["Ciencia ficción", "Drama", "Comedia"],
+    year: 2023,
     preview:
-      "La increíble historia de Bella Baxter, una joven revivida por el brillante y poco ortodoxo científico Dr. Godwin Baxter.",
+      "Una joven resucitada con el cerebro de su hijo por un científico excéntrico se embarca en un viaje de autodescubrimiento y liberación sexual en la época victoriana.",
+    summary:
+      "From visionary filmmaker Yorgos Lanthimos comes the incredible and tragic tale of Bella Baxter, a young woman brought back to life by brilliant and unorthodox scientist Dr. Godwin Baxter. Wanting to learn, Bella is aware of the worldliness she lacks. Under Godwin’s protection and tutelage, Bella grows increasingly curious and yearns for the worldliness she is denied. To learn more about the world, Bella escapes with Duncan Wedderburn, a debauched lawyer, and travels across the continents. Free from the prejudices of her times, Bella’s journey becomes one of self-discovery and liberation.",
     director: "Yorgos Lanthimos",
+    writer: "Tony McNamara, Alasdair Gray (novel)",
+    distributor: "Searchlight Pictures",
     duration: "141 min",
     classification: "R",
+    reviews: [
+      {
+        user: "Jane Doe",
+        rating: 5,
+        date: "December 20, 2023",
+        content:
+          "A visually stunning and thought-provoking film.  Emma Stone delivers a captivating performance.",
+        likes: 120,
+        replies: 30,
+        avatar:
+          "https://images.unsplash.com/photo-1508214799962-5a981c0c93fe?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=150&h=150",
+      },
+      {
+        user: "John Smith",
+        rating: 4,
+        date: "December 15, 2023",
+        content:
+          "A unique and bizarre film that challenges conventional storytelling. It's not for everyone, but I appreciated its originality.",
+        likes: 95,
+        replies: 22,
+        avatar:
+          "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=150&h=150",
+      },
+      {
+        user: "Alice Johnson",
+        rating: 4.5,
+        date: "December 10, 2023",
+        content:
+          "Emma Stone's performance is phenomenal. The film is beautifully shot and the story is both disturbing and fascinating.",
+        likes: 110,
+        replies: 25,
+        avatar:
+          "https://images.unsplash.com/photo-1500648590998-ada8c199c6ca?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=150&h=150",
+      },
+    ],
+    castMembers: [
+      {
+        name: "Emma Stone",
+        character: "Bella Baxter",
+        image:
+          "https://images.unsplash.com/photo-1573442795213-92c24209865b?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=150&h=150",
+      },
+      {
+        name: "Mark Ruffalo",
+        character: "Duncan Wedderburn",
+        image:
+          "https://images.unsplash.com/photo-1519244703599-4977c3855599?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=150&h=150",
+      },
+      {
+        name: "Willem Dafoe",
+        character: "Dr. Godwin Baxter",
+        image:
+          "https://images.unsplash.com/photo-1544005313-946c796dfc3a?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=150&h=150",
+      },
+      {
+        name: "Ramy Youssef",
+        character: "Max McCandless",
+        image:
+          "https://images.unsplash.com/photo-1589410317094-1b4699565551?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=150&h=150",
+      },
+    ],
+    mediaGallery: [
+      {
+        type: "scene",
+        title: "Bella's Rebirth",
+        image: "https://i.ytimg.com/vi/mB5pB92k9l4/maxresdefault.jpg",
+      },
+      {
+        type: "behind",
+        title: "Costume Design",
+        image:
+          "https://images.unsplash.com/photo-1512211628865-c35785f75661?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=300&h=200",
+      },
+      {
+        type: "scene",
+        title: "Travels with Duncan",
+        image:
+          "https://images.unsplash.com/photo-1485550269992-c4f5115999bb?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=300&h=200",
+      },
+    ],
+    streamingPlatforms: [
+      {
+        name: "Hulu",
+        logo: "https://images.unsplash.com/photo-1549488394-b78901c9c745?ixlib=rb-4.0&ixid=M3yMDJBI7wE8NjAwMDkyNzE4fHx8fGVufDB8fHx8fA&auto=format&fit=crop&w=100&h=100",
+        color: "from-green-500 to-green-700",
+        available: true,
+      },
+      {
+        name: "Amazon Prime Video",
+        logo: "https://images.unsplash.com/photo-1553545204-4f7d339aa06a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
+        color: "from-blue-600 to-blue",
+      },
+    ],
+    Awards: [
+      {
+        type: "trophy",
+        name: "Academy Award Nomination - Visual Effects",
+      },
+      {
+        type: "award",
+        name: "BAFTA Award - Special Visual Effects",
+      },
+    ],
+    similarMovies: [],
   },
   {
     id: 2,
     title: "Ready Player One",
     rating: 4.2,
-    image:
+    heroposter:
       "https://th.bing.com/th/id/OIP.c0q6NJYlJ3xK9UAj72yMFAHaLH?rs=1&pid=ImgDetMain",
+    poster:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/hd/7852c263080025.5aa583fb8d04a.jpg",
     genre: ["Acción", "Aventura", "Ciencia ficción"],
     year: 2018,
     preview:
       "Cuando el creador de un popular videojuego de realidad virtual muere, lanza un concurso póstumo en el que el ganador heredará su fortuna.",
+    summary:
+      " In the year 2045, the real world is a harsh place. The only time Wade Watts (Tye Sheridan) truly feels alive is when he escapes to the OASIS, an immersive virtual universe where most of humanity spends their days. In the OASIS, you can go anywhere, do anything, be anyone—the only limits are your own imagination. The OASIS was created by the brilliant and eccentric James Halliday (Mark Rylance), who left his immense fortune and total control of the OASIS to the winner of a three-part contest he designed to find a worthy heir. When Wade conquers the first challenge of the reality-bending treasure hunt, he and his friends—known as the High Five—are hurled into a fantastical universe of discovery and danger to save the OASIS and their world.",
     director: "Steven Spielberg",
+    writer: "Zak Penn, Ernest Cline",
+    distributor: "Warner Bros. Pictures",
     duration: "140 min",
     classification: "PG-13",
+    reviews: [
+      {
+        user: "Monke D. Luffy",
+        rating: 5,
+        date: "March 15, 2024",
+        content:
+          "A visual masterpiece that perfectly captures the spirit of gaming culture. Spielberg's direction brings the virtual world to life in spectacular fashion.",
+        likes: 234,
+        replies: 45,
+        avatar:
+          "https://i.pinimg.com/736x/75/b8/b7/75b8b7cd70cfa5c569154a646a2f716d.jpg",
+      },
+      {
+        user: "Roronoa Zoro",
+        rating: 4,
+        date: "March 10, 2024",
+        content:
+          "While the references might be overwhelming for some, the heart of the story shines through. The OASIS is a technical achievement in visual effects.",
+        likes: 186,
+        replies: 28,
+        avatar:
+          "https://i.pinimg.com/originals/a3/2c/94/a32c947afd620ba53de48a21b29fad64.jpg",
+      },
+      {
+        user: "Vinksmoke Sanji",
+        rating: 5,
+        date: "March 5, 2024",
+        content:
+          "An incredible journey that blends nostalgia with cutting-edge visuals. The race scene alone is worth the price of admission.",
+        likes: 152,
+        replies: 31,
+        avatar:
+          "https://i.pinimg.com/736x/16/4c/f5/164cf5c5931c4ac7ff36f43cc829f594.jpg",
+      },
+    ],
+    castMembers: [
+      {
+        name: "Tye Sheridan",
+        character: "Wade Watts / Parzival",
+        image:
+          "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
+      },
+      {
+        name: "Olivia Cooke",
+        character: "Samantha Cook / Art3mis",
+        image:
+          "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
+      },
+      {
+        name: "Ben Mendelsohn",
+        character: "Nolan Sorrento",
+        image:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
+      },
+      {
+        name: "Mark Rylance",
+        character: "James Halliday / Anorak",
+        image:
+          "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150",
+      },
+    ],
+    mediaGallery: [
+      {
+        type: "scene",
+        title: "OASIS Virtual World",
+        image: "https://i.ytimg.com/vi/-JgIslfYajI/maxresdefault.jpg",
+      },
+      {
+        type: "behind",
+        title: "Motion Capture Session",
+        image:
+          "https://images.unsplash.com/photo-1578632767115-351597cf2477?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200",
+      },
+      {
+        type: "scene",
+        title: "Race Scene",
+        image:
+          "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200",
+      },
+    ],
+    streamingPlatforms: [
+      {
+        name: "Netflix",
+        logo: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
+        color: "from-red-700 to-red-900",
+        available: true,
+      },
+      {
+        name: "HBO Max",
+        logo: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
+        color: "from-purple-700 to-purple-900",
+        available: true,
+      },
+      {
+        name: "Amazon Prime",
+        logo: "https://images.unsplash.com/photo-1553545204-4f7d339aa06a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
+        color: "from-blue-600 to-blue-800",
+        available: true,
+      },
+      {
+        name: "Disney+",
+        logo: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
+        color: "from-blue-700 to-blue-900",
+        available: false,
+      },
+      {
+        name: "Paramount+",
+        logo: "https://images.unsplash.com/photo-1627873649417-c67c5215e3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100",
+        color: "from-blue-800 to-blue-950",
+        available: false,
+      },
+    ],
+    Awards: [
+      {
+        type: "trophy",
+        name: "Academy Award Nomination - Visual Effects",
+      },
+      {
+        type: "award",
+        name: "BAFTA Award - Special Visual Effects",
+      },
+    ],
+    similarMovies: [],
   },
   {
     id: 3,
     title: "Baby Driver",
     rating: 4.0,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.wDsSqp7qBcMwER6j8xN-ywHaLA?rs=1&pid=ImgDetMain",
     genre: ["Acción", "Crimen", "Musical"],
     year: 2017,
@@ -46,7 +285,7 @@ export const featuredMovies = [
     id: 4,
     title: "Mad Max: Fury Road",
     rating: 4.8,
-    image: "https://fr.web.img3.acsta.net/pictures/15/04/14/18/30/215297.jpg",
+    poster: "https://fr.web.img3.acsta.net/pictures/15/04/14/18/30/215297.jpg",
     genre: ["Acción", "Aventura", "Ciencia ficción"],
     year: 2015,
     preview:
@@ -59,7 +298,7 @@ export const featuredMovies = [
     id: 5,
     title: "Tron",
     rating: 3.8,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.DwUf_IPcQc0ANst2Jnhn4QHaKl?w=131&h=187&c=7&r=0&o=5&pid=1.7",
     genre: ["Ciencia ficción", "Aventura", "Acción"],
     year: 1982,
@@ -73,7 +312,7 @@ export const featuredMovies = [
     id: 6,
     title: "Mi Vecino Totoro",
     rating: 4.7,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.548566e8cf45dc11b59d13c12d5dbec0?rik=aeeJkyabBBcO%2fQ&riu=http%3a%2f%2fwww.cartelesmix.com%2fcarteles%2festrenos2009%2fmivecinototoro8803.jpg&ehk=5ZPAAdyJ%2bdhHskc94c2nB596NcISHCCWPnAWMuJZyb4%3d&risl=&pid=ImgRaw&r=0",
     genre: ["Animación", "Familiar", "Fantasia"],
     year: 1988,
@@ -87,7 +326,7 @@ export const featuredMovies = [
     id: 7,
     title: "Dragon Ball Super: Broly",
     rating: 4.3,
-    image:
+    poster:
       "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     genre: ["Animación", "Acción", "Aventura"],
     year: 2018,
@@ -101,7 +340,7 @@ export const featuredMovies = [
     id: 8,
     title: "One Piece Film: Red",
     rating: 4.4,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.3fb65148f9520a8aa183096570328e76?rik=gn42A1VyPhVl2w&pid=ImgRaw&r=0",
     genre: ["Animación", "Acción", "Aventura"],
     year: 2022,
@@ -115,7 +354,7 @@ export const featuredMovies = [
     id: 9,
     title: "Los Ilusionistas",
     rating: 4.0,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.3n3N603r2lC2wsy5uvt6MAHaLH?rs=1&pid=ImgDetMain",
     genre: ["Thriller", "Intriga", "Crimen"],
     year: 2013,
@@ -129,7 +368,7 @@ export const featuredMovies = [
     id: 10,
     title: "Kingsman: El Círculo Dorado",
     rating: 3.9,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.51305ff156a3373d563c1093e4bdf0c8?rik=UlaRqwgY2TgNvg&pid=ImgRaw&r=0",
     genre: ["Acción", "Aventura", "Comedia"],
     year: 2017,
@@ -143,7 +382,7 @@ export const featuredMovies = [
     id: 11,
     title: "Cómo Entrenar a tu Dragón",
     rating: 4.6,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.7bd7a9b697a89f374c8b4da1095ca139?rik=0wYLX8FXf34Mng&pid=ImgRaw&r=0",
     genre: ["Animación", "Aventura", "Familiar"],
     year: 2010,
@@ -157,7 +396,7 @@ export const featuredMovies = [
     id: 12,
     title: "Godzilla",
     rating: 3.5,
-    image:
+    poster:
       "https://image.tmdb.org/t/p/original/1t0FcqSsBs51PDhDkFd7EiEytU6.jpg",
     genre: ["Ciencia ficción", "Acción", "Aventura"],
     year: 2014,
@@ -171,7 +410,7 @@ export const featuredMovies = [
     id: 13,
     title: "John Wick",
     rating: 4.2,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.bacb4gLuvXQpcAFpO7Q9hgHaLH?rs=1&pid=ImgDetMain",
     genre: ["Acción", "Thriller", "Crimen"],
     year: 2014,
@@ -185,7 +424,7 @@ export const featuredMovies = [
     id: 14,
     title: "Hombres de Negro",
     rating: 4.0,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.95fed080dda57bf7e09e9ea1131b03b4?rik=i7bdIm90bRB%2fPQ&pid=ImgRaw&r=0",
     genre: ["Ciencia ficción", "Acción", "Comedia"],
     year: 1997,
@@ -199,7 +438,7 @@ export const featuredMovies = [
     id: 15,
     title: "Watchmen",
     rating: 4.5,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.8H2ulsU_4NeqD4wci3j0YgHaLf?rs=1&pid=ImgDetMain",
     genre: ["Acción", "Drama", "Misterio"],
     year: 2009,
@@ -213,7 +452,7 @@ export const featuredMovies = [
     id: 16,
     title: "X-Men",
     rating: 3.8,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.70a2f9351cdd6a0fc91ed5dffc14ef49?rik=Vc%2fgIvcAxwrIqA&pid=ImgRaw&r=0",
     genre: ["Ciencia ficción", "Acción", "Aventura"],
     year: 2000,
@@ -227,7 +466,7 @@ export const featuredMovies = [
     id: 17,
     title: "Tren Bala",
     rating: 4.1,
-    image:
+    poster:
       "https://www.themoviedb.org/t/p/original/tnPGFoeQpLznLplytqPjmvRIJ2F.jpg",
     genre: ["Acción", "Comedia", "Thriller"],
     year: 2022,
@@ -241,7 +480,7 @@ export const featuredMovies = [
     id: 18,
     title: "Parásitos",
     rating: 4.6,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.0KZ917k5v8OgYflOwX_vhQHaEL?rs=1&pid=ImgDetMain",
     genre: ["Drama", "Thriller", "Comedia negra"],
     year: 2019,
@@ -256,7 +495,7 @@ export const featuredMovies = [
     id: 19,
     title: "El viaje de Chihiro",
     rating: 4.8,
-    image:
+    poster:
       "https://image.tmdb.org/t/p/original/vlsi5iZcfDChKNGNvRp7Zp3SULH.jpg",
     genre: ["Animación", "Aventura", "Fantasía"],
     year: 2001,
@@ -270,7 +509,7 @@ export const featuredMovies = [
     id: 20,
     title: "El Señor de los Anillos: La Comunidad del Anillo",
     rating: 4.7,
-    image: "https://images-na.ssl-images-amazon.com/images/I/816QLZKwmIL.jpg",
+    poster: "https://images-na.ssl-images-amazon.com/images/I/816QLZKwmIL.jpg",
     genre: ["Aventura", "Fantasía", "Acción"],
     year: 2001,
     preview:
@@ -283,7 +522,7 @@ export const featuredMovies = [
     id: 21,
     title: "La La Land",
     rating: 4.5,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.51jQD4ilf8uWPR6xFlGb7wHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7",
     genre: ["Musical", "Drama", "Romance"],
     year: 2016,
@@ -297,7 +536,7 @@ export const featuredMovies = [
     id: 22,
     title: "El Castillo Ambulante",
     rating: 4.5,
-    image:
+    poster:
       "https://www.themoviedb.org/t/p/original/5sSMmeqM3jdCtQWBFsqvfbEIsL7.jpg",
     genre: ["Animación", "Aventura", "Fantasía"],
     year: 2004,
@@ -311,7 +550,7 @@ export const featuredMovies = [
     id: 23,
     title: "El Club de la Lucha",
     rating: 4.4,
-    image:
+    poster:
       "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Fight_Club_poster.jpg/220px-Fight_Club_poster.jpg",
     genre: ["Drama", "Thriller", "Acción"],
     year: 1999,
@@ -325,7 +564,7 @@ export const featuredMovies = [
     id: 24,
     title: "El Padrino",
     rating: 4.9,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.f97ecf62eef2b3b57ba71192b309d738?rik=5cz8Hu39N6ZUHw&riu=http%3a%2f%2fdiariodeunacinefila.files.wordpress.com%2f2011%2f09%2fposter-de-el-padrino.jpg&ehk=WhgwF6xslFBh0RB%2f4n9G10tz%2fhYQjMig7nL8t%2bt9DHE%3d&risl=&pid=ImgRaw&r=0",
     genre: ["Crimen", "Drama"],
     year: 1972,
@@ -339,7 +578,7 @@ export const featuredMovies = [
     id: 25,
     title: "Forrest Gump",
     rating: 4.7,
-    image:
+    poster:
       "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Forrest_Gump_poster.jpg/220px-Forrest_Gump_poster.jpg",
     genre: ["Drama", "Romance"],
     year: 1994,
@@ -353,7 +592,7 @@ export const featuredMovies = [
     id: 26,
     title: "Matrix",
     rating: 4.6,
-    image:
+    poster:
       "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Matrix_Poster.jpg/220px-The_Matrix_Poster.jpg",
     genre: ["Ciencia ficción", "Acción"],
     year: 1999,
@@ -367,7 +606,7 @@ export const featuredMovies = [
     id: 27,
     title: "El Silencio de los Corderos",
     rating: 4.5,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.83648afbf4854e5dcb0a487459232ea9?rik=%2bUA1v6M16msEWw&riu=http%3a%2f%2fwww.cartelesmix.com%2fcarteles%2fcarteles%2fletras%2fsilenciocorderos11.jpg&ehk=NmaLxo6HgeKKGs0nSK4iQFeMNLLPJsWr2n%2fU1YFObck%3d&risl=&pid=ImgRaw&r=0",
     genre: ["Thriller", "Crimen"],
     year: 1991,
@@ -381,7 +620,7 @@ export const featuredMovies = [
     id: 28,
     title: "Memento",
     rating: 4.3,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.DOMT-C0e9hysmxYwqq-s6gHaKX?rs=1&pid=ImgDetMain",
     genre: ["Misterio", "Thriller"],
     year: 2000,
@@ -395,7 +634,7 @@ export const featuredMovies = [
     id: 29,
     title: "Asesinato en el Expreso de Oriente",
     rating: 4.4,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.cceb6b9ac8e6fc80b1320a8ede0e1bb4?rik=6gRJag%2fLMPtmGw&riu=http%3a%2f%2fes.web.img3.acsta.net%2fpictures%2f17%2f07%2f05%2f09%2f37%2f477704.jpg&ehk=OVUd%2f7kX8t8zMyaa8KcuHymrJ8jQt%2fOzO7%2fDbZCoFyU%3d&risl=&pid=ImgRaw&r=0",
     genre: ["Misterio", "Crimen", "Thriller"],
     year: 1974,
@@ -409,7 +648,7 @@ export const featuredMovies = [
     id: 30,
     title: "La Naranja Mecánica",
     rating: 4.3,
-    image:
+    poster:
       "https://th.bing.com/th/id/OIP.k7iY9B2Ij7c3ooHSisIIEgHaLM?rs=1&pid=ImgDetMain",
     genre: ["Ciencia ficción", "Drama"],
     year: 1971,
@@ -423,7 +662,7 @@ export const featuredMovies = [
     id: 31,
     title: "Blade Runner 2049",
     rating: 4.2,
-    image:
+    poster:
       "https://th.bing.com/th/id/R.2c16c35610053ec14da2705309c18597?rik=sYFEA%2bdaDzjFSA&pid=ImgRaw&r=0",
     genre: ["Ciencia ficción", "Thriller"],
     year: 2017,
@@ -437,7 +676,7 @@ export const featuredMovies = [
     id: 33,
     title: "La Princesa Mononoke",
     rating: 4.6,
-    image: "https://wallpapercave.com/wp/wp4108308.jpg",
+    poster: "https://wallpapercave.com/wp/wp4108308.jpg",
     genre: ["Animación", "Aventura", "Fantasía"],
     year: 1997,
     preview:
@@ -450,7 +689,7 @@ export const featuredMovies = [
     id: 34,
     title: "La Llegada",
     rating: 4.3,
-    image: "https://pics.filmaffinity.com/arrival-150207636-large.jpg",
+    poster: "https://pics.filmaffinity.com/arrival-150207636-large.jpg",
     genre: ["Ciencia ficción", "Drama"],
     year: 2016,
     preview:
