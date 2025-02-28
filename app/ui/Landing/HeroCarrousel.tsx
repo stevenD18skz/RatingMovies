@@ -71,24 +71,13 @@ export function HeroCarousel({ moviesH }: { moviesH: Movie[] }) {
                     <span className="text-gray-400 ml-1">/5.0</span>
                   </div>
                   <div className="h-6 w-px bg-gray-600" />
-                  <span className="text-gray-300">Dir: {1212}</span>
+                  <span className="text-gray-200 font-bold">
+                    Generes: {movie.genres.map((g) => g + ", ")}
+                  </span>
                 </div>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   {movie.synopsis}
                 </p>
-                <div className="flex gap-4">
-                  <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg flex items-center gap-2 transition-all duration-300 transform hover:scale-105">
-                    <Play className="w-5 h-5" />
-                    Ver Reseña
-                  </button>
-                  <button className="bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-lg flex items-center gap-2 transition-colors duration-300">
-                    <Heart className="w-5 h-5" />
-                    Watchlist
-                  </button>
-                  <button className="bg-gray-800 hover:bg-gray-700 p-4 rounded-lg transition-colors duration-300">
-                    <Share2 className="w-5 h-5" />
-                  </button>
-                </div>
               </div>
             </div>
           ))}

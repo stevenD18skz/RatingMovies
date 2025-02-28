@@ -26,8 +26,7 @@ export const featuredMovies = [
     genres: ["Action", "Sci-Fi", "Adventure", "Fantasy", "Thriller"],
     synopsis:
       "In the year 2045, the real world is a harsh place. The only time Wade Watts truly feels alive is when he escapes to the OASIS...",
-    posterUrl:
-      "https://m.media-amazon.com/images/I/71WAylLeCLL.jpg",
+    posterUrl: "https://m.media-amazon.com/images/I/71WAylLeCLL.jpg",
     heroposter:
       "https://th.bing.com/th/id/OIP.c0q6NJYlJ3xK9UAj72yMFAHaLH?rs=1&pid=ImgDetMain",
   },
@@ -138,7 +137,7 @@ export const featuredMovies = [
     classification: "PG-13",
     rating: 3.8,
     ratingText: "7.2/10",
-    genres: ["Crimen", "Misterio", "Suspenso"],
+    genres: ["Crime", "Mystery", "Thriller"], // Traducido de "Crimen", "Misterio", "Suspenso"
     synopsis:
       "Un equipo de ilusionistas realiza robos bancarios durante sus espectáculos y los fondos se entregan a la audiencia.",
     posterUrl:
@@ -155,7 +154,7 @@ export const featuredMovies = [
     classification: "R",
     rating: 3.5,
     ratingText: "6.7/10",
-    genres: ["Acción", "Aventura", "Comedia"],
+    genres: ["Action", "Adventure", "Comedy"], // Traducido de "Acción", "Aventura", "Comedia"
     synopsis:
       "Cuando el cuartel general de Kingsman es destruido, los agentes viajan a Estados Unidos para unirse a su organización hermana, Statesman, para detener a un enemigo común.",
     posterUrl:
@@ -172,7 +171,7 @@ export const featuredMovies = [
     classification: "PG",
     rating: 4.5,
     ratingText: "8.1/10",
-    genres: ["Animación", "Aventura", "Familiar"],
+    genres: ["Animation", "Adventure", "Family"], // Traducido de "Animación", "Aventura", "Familiar"
     synopsis:
       "Un joven vikingo que aspira a cazar dragones se hace amigo de un dragón legendario y aprende que hay más en las criaturas de lo que pensaba.",
     posterUrl:
@@ -189,7 +188,7 @@ export const featuredMovies = [
     classification: "PG-13",
     rating: 3.7,
     ratingText: "6.4/10",
-    genres: ["Acción", "Aventura", "Ciencia ficción"],
+    genres: ["Action", "Adventure", "Sci-Fi"], // Traducido de "Acción", "Aventura", "Ciencia ficción"
     synopsis:
       "La humanidad lucha por sobrevivir cuando monstruos gigantes, conocidos como MUTOs, se levantan para desafiar el dominio de Godzilla.",
     posterUrl:
@@ -206,7 +205,7 @@ export const featuredMovies = [
     classification: "R",
     rating: 4.0,
     ratingText: "7.4/10",
-    genres: ["Acción", "Suspenso"],
+    genres: ["Action", "Thriller"], // Traducido de "Acción", "Suspenso"
     synopsis:
       "Un ex asesino busca venganza contra los gánsteres que mataron a su perro, un regalo de su difunta esposa.",
     posterUrl:
@@ -223,7 +222,7 @@ export const featuredMovies = [
     classification: "PG-13",
     rating: 4.1,
     ratingText: "7.3/10",
-    genres: ["Acción", "Aventura", "Comedia"],
+    genres: ["Action", "Adventure", "Comedy"], // Traducido de "Acción", "Aventura", "Comedia"
     synopsis:
       "Dos agentes de una organización secreta que supervisa la actividad extraterrestre en la Tierra deben evitar que un terrorista alienígena destruya el planeta.",
     posterUrl:
@@ -240,7 +239,7 @@ export const featuredMovies = [
     classification: "R",
     rating: 4.2,
     ratingText: "7.6/10",
-    genres: ["Acción", "Drama", "Misterio"],
+    genres: ["Action", "Drama", "Mystery"], // Traducido de "Acción", "Drama", "Misterio"
     synopsis:
       "En una realidad alternativa de 1985, un grupo de superhéroes retirados investiga el asesinato de uno de sus miembros y descubre una conspiración que podría cambiar el curso de la historia.",
     posterUrl:
@@ -257,7 +256,7 @@ export const featuredMovies = [
     classification: "PG-13",
     rating: 3.9,
     ratingText: "7.4/10",
-    genres: ["Acción", "Aventura", "Ciencia ficción"],
+    genres: ["Action", "Adventure", "Sci-Fi"], // Traducido de "Acción", "Aventura", "Ciencia ficción"
     synopsis:
       "Un grupo de mutantes con habilidades extraordinarias lucha por proteger a la humanidad de una amenaza mutante radical.",
     posterUrl:
@@ -274,7 +273,7 @@ export const featuredMovies = [
     classification: "R",
     rating: 3.6,
     ratingText: "6.8/10",
-    genres: ["Acción", "Comedia", "Suspenso"],
+    genres: ["Action", "Comedy", "Thriller"], // Traducido de "Acción", "Comedia", "Suspenso"
     synopsis:
       "Un asesino a sueldo llamado Ladybug se encuentra con otros asesinos a",
     posterUrl:
@@ -580,17 +579,17 @@ export const nextsMovies = [
 ];
 
 export const genres = [
-  "Todos",
-  "Acción",
-  "Aventura",
-  "Ciencia Ficción",
+  "All",
+  "Action",
+  "Adventure",
+  "Sci-Fi",
   "Drama",
-  "Comedia",
-  "Animación",
+  "Comedy",
+  "Animation",
   "Anime",
-  "Fantasía",
-  "Familiar",
-  "Terror",
+  "Fantasy",
+  "Family",
+  "Horror",
   "Romance",
   "Thriller",
 ];

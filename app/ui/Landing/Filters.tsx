@@ -82,12 +82,14 @@ export function Filters({
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
           >
-            <option value="all">Todos los años</option>
+            <option value="All">Todos los años</option>
             {years.map((year) => (
               <option key={year} value={year}>
                 {year}
               </option>
             ))}
+
+            <option value="<">{"<"} 2020 </option>
           </select>
         </div>
       </div>

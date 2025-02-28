@@ -29,8 +29,8 @@ const getAllMovies = async (): Promise<Movie[]> => {
 
 export default function Home() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
-  const [selectedGenre, setSelectedGenre] = useState("Todos");
-  const [selectedYear, setSelectedYear] = useState("all");
+  const [selectedGenre, setSelectedGenre] = useState("All");
+  const [selectedYear, setSelectedYear] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -75,9 +75,11 @@ export default function Home() {
       movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       movie.synopsis.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesGenre =
-      selectedGenre === "Todos" || movie.genres.includes(selectedGenre);
+      selectedGenre === "All" || movie.genres.includes(selectedGenre);
     const matchesYear =
-      selectedYear === "all" || movie.releaseYear?.toString() === selectedYear;
+      selectedYear === "All" ||
+      (selectedYear === "<" && movie.releaseYear < 2020) ||
+      movie.releaseYear?.toString() === selectedYear;
     return matchesSearch && matchesGenre && matchesYear;
   });
 

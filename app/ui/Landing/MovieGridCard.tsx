@@ -1,4 +1,4 @@
-import { Star, Calendar, Clock, Film } from "lucide-react";
+import { Star, Calendar, Clock, Film, Play } from "lucide-react";
 import Link from "next/link";
 
 import { Movie } from "../../types/movie";
@@ -16,13 +16,21 @@ export function MovieGridCard({ movie }: { movie: Movie }) {
           alt={movie.title}
           className="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700 ease-out"
         />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+          <Play className="w-8 h-8 text-white" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent group-hover:via-gray-900/30 transition-all duration-300" />
         <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-lg flex items-center font-semibold z-10">
           <Star size={16} className="mr-1" />
           {movie.rating}
         </div>
         <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-          <h3 className="text-2xl font-bold mb-2">{movie.title}</h3>
+          <div className="flex gap-2 text-center items-center">
+            <h3 className="text-2xl font-bold mb-2">{movie.title}</h3>
+            <div className="h-6 w-px bg-gray-600" />
+            <span className="text-gray-200 font-bold">{movie.releaseYear}</span>
+          </div>
+
           <div className="flex flex-wrap gap-2 mb-3">
             {movie.genres.map((g, index) => (
               <span

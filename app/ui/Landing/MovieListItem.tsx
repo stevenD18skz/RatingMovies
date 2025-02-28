@@ -1,4 +1,4 @@
-import { Star, Calendar, Clock, Film } from "lucide-react";
+import { Star, Calendar, Clock, Film, Play } from "lucide-react";
 import Link from "next/link";
 
 import { Movie } from "../../types/movie";
@@ -17,6 +17,9 @@ export function MovieListItem({ movie }: { movie: Movie }) {
             alt={movie.title}
             className="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700 ease-out"
           />
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <Play className="w-8 h-8 text-white" />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-gray-900/30 group-hover:to-gray-900/50 transition-all duration-300" />
         </div>
         <div className="flex-1 p-6 flex flex-col justify-between">
