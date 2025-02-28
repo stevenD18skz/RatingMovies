@@ -1,4 +1,4 @@
-import { Flame, Calendar, Calendar1 } from "lucide-react";
+import { Calendar1 } from "lucide-react";
 
 import { Movie } from "../../types/movie";
 import Link from "next/link";

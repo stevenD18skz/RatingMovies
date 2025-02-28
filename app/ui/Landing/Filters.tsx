@@ -1,7 +1,6 @@
 "use client";
 
 import { LayoutGrid, List, Search } from "lucide-react";
-import { useState } from "react";
 
 type FiltersProps = {
   selectedGenre: string;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Clock, Calendar, Film, Heart, Share2, Play } from "lucide-react";
 import Rating from "../Rating";
 import { Movie } from "../../types/movie";
 

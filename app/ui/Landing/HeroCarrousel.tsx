@@ -7,9 +7,6 @@ import {
   Clock,
   Film,
   Star,
-  Play,
-  Heart,
-  Share2,
 } from "lucide-react";
 
 import { Movie } from "../../types/movie";

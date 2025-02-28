@@ -1,7 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronRight, Play } from "lucide-react";
 
 import MovieDetail from "../../ui/movies/MovieDetail";
 import CarruselMovies from "../../ui/CarruselMovies";

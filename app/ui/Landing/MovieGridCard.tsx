@@ -1,4 +1,4 @@
-import { Star, Calendar, Clock, Film, Play } from "lucide-react";
+import { Star, Calendar, Clock, Play } from "lucide-react";
 import Link from "next/link";
 
 import { Movie } from "../../types/movie";
