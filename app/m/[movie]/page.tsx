@@ -27,7 +27,7 @@ const getSimilarMovies = (selectedMovie: Movie): Movie[] => {
       (movie) =>
         movie.id !== selectedMovie.id && movie.genres.includes(primaryGenre)
     )
-    .slice(0, 6);
+    .slice(0, 10);
 };
 
 const MoviePage = async ({ params }: PageParams) => {

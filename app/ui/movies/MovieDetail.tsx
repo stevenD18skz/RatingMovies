@@ -44,7 +44,7 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie }) => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto  py-12">
         {/* Movie Details */}
         <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-xl p-8 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

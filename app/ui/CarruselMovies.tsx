@@ -1,17 +1,19 @@
 import { Play } from "lucide-react";
+import Link from "next/link";
 
 import { Movie } from "../types/movie";
 
 export default function page({ movies }: { movies: Movie[] }) {
   return (
-    <section className="my-16 mx-8">
+    <section className="container mx-auto">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Similar Movies</h2>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {movies.map((movie) => (
-          <article
+          <Link
+            href={`/m/${movie.title}`}
             key={movie.id}
             className="group cursor-pointer transform hover:scale-105 transition-transform"
           >
@@ -31,7 +33,7 @@ export default function page({ movies }: { movies: Movie[] }) {
               {movie.title}
             </h3>
             <p className="text-sm text-gray-400">{movie.releaseYear}</p>
-          </article>
+          </Link>
         ))}
       </div>
     </section>

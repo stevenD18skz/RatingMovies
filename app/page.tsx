@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import {
   heroMovies,
   featuredMovies,
@@ -16,6 +17,15 @@ import { MovieListItem } from "./ui/Landing/MovieListItem";
 import { Pagination } from "./ui/Landing/Pagination";
 import { FeaturedSection } from "./ui/Landing/FeaturedSection";
 import { Flame, Calendar } from "lucide-react";
+import SkeletonLanding from "./ui/Landing/SkeletonLanding";
+
+import { Movie } from "./types/movie";
+
+const getAllMovies = async (): Promise<Movie[]> => {
+  // Simulación de llamada API con retraso
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  return featuredMovies;
+};
 
 export default function Home() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -24,10 +34,43 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
+  const [allMovies, setAllMovies] = useState<Movie[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const totalHeight = document.body.scrollHeight;
+      if (scrollPosition >= totalHeight) {
+        setCurrentPage((prev) => prev + 1);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setLoading(true);
+    getAllMovies().then((movies) => {
+      setAllMovies(movies);
+      setLoading(false);
+    });
+  }, []);
+
   const moviesPerPage = 9;
 
   // Filter movies based on search and filters
-  const filteredMovies = featuredMovies.filter((movie) => {
+  const filteredMovies = allMovies.filter((movie) => {
+    console.log(
+      selectedGenre,
+      selectedYear,
+      searchQuery,
+      movie.title,
+      movie.synopsis,
+      movie.genres,
+      movie.releaseYear
+    );
     const matchesSearch =
       movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       movie.synopsis.toLowerCase().includes(searchQuery.toLowerCase());
@@ -44,6 +87,10 @@ export default function Home() {
     (currentPage - 1) * moviesPerPage,
     currentPage * moviesPerPage
   );
+
+  if (loading) {
+    return <SkeletonLanding />;
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
