@@ -1,6 +1,8 @@
 import { Play } from "lucide-react";
 
-export default function page({ movies }) {
+import { Movie } from "../types/movie";
+
+export default function page({ movies }: { movies: Movie[] }) {
   return (
     <section className="my-16 mx-8">
       <div className="flex justify-between items-center mb-6">
