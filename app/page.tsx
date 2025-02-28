@@ -61,11 +61,11 @@ function App() {
   const filteredMovies = featuredMovies.filter((movie) => {
     const matchesSearch =
       movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      movie.preview.toLowerCase().includes(searchQuery.toLowerCase());
+      movie.synopsis.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesGenre =
-      selectedGenre === "Todos" || movie.genre.includes(selectedGenre);
+      selectedGenre === "Todos" || movie.genres.includes(selectedGenre);
     const matchesYear =
-      selectedYear === "all" || movie.year.toString() === selectedYear;
+      selectedYear === "all" || movie.year?.toString() === selectedYear;
     return matchesSearch && matchesGenre && matchesYear;
   });
 
@@ -96,7 +96,7 @@ function App() {
                 key={movie.id}
                 className="relative w-full h-full"
                 style={{
-                  backgroundImage: `url(${movie.heroposter})`,
+                  backgroundImage: `url("https://i.pinimg.com/originals/76/71/5e/76715ecff73dbd26359a6216966eede4.jpg")`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -126,10 +126,10 @@ function App() {
                       <span className="text-gray-400 ml-1">/5.0</span>
                     </div>
                     <div className="h-6 w-px bg-gray-600" />
-                    <span className="text-gray-300">Dir: {movie.director}</span>
+                    <span className="text-gray-300">Dir: {1212}</span>
                   </div>
                   <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                    {movie.preview}
+                    {movie.synopsis}
                   </p>
                   <div className="flex gap-4">
                     <button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg flex items-center gap-2 transition-all duration-300 transform hover:scale-105">
@@ -263,7 +263,7 @@ function App() {
               >
                 <div className="relative h-[400px] overflow-hidden">
                   <img
-                    src={movie.poster}
+                    src={movie.posterUrl}
                     alt={movie.title}
                     className="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700 ease-out"
                   />
@@ -275,7 +275,7 @@ function App() {
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-2xl font-bold mb-2">{movie.title}</h3>
                     <div className="flex flex-wrap gap-2 mb-3">
-                      {movie.genre.map((g, index) => (
+                      {movie.genres.map((g, index) => (
                         <span
                           key={index}
                           className="px-3 py-1 bg-gray-800/80 rounded-full text-sm font-medium text-gray-300"
@@ -285,7 +285,7 @@ function App() {
                       ))}
                     </div>
                     <p className="text-gray-300 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {movie.preview}
+                      {movie.synopsis}
                     </p>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ function App() {
                 <div className="flex">
                   <div className="relative w-64 overflow-hidden">
                     <img
-                      src={movie.poster}
+                      src={movie.posterUrl}
                       alt={movie.title}
                       className="w-full h-full object-cover transform group-hover:scale-125 transition-transform duration-700 ease-out"
                     />
@@ -338,7 +338,7 @@ function App() {
                         </div>
                       </div>
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {movie.genre.map((g, index) => (
+                        {movie.genres.map((g, index) => (
                           <span
                             key={index}
                             className="px-3 py-1 bg-gray-800 rounded-full text-sm font-medium text-gray-300"
@@ -348,7 +348,7 @@ function App() {
                         ))}
                       </div>
                       <p className="text-gray-300 line-clamp-2 mb-4">
-                        {movie.preview}
+                        {movie.synopsis}
                       </p>
                     </div>
                     <div className="flex justify-between items-center">
@@ -466,7 +466,7 @@ function App() {
                 {recentMovies.map((movie) => (
                   <div key={movie.id} className="flex gap-4 items-start">
                     <img
-                      src={movie.poster}
+                      src={movie.posterUrl}
                       alt={movie.title}
                       className="w-24 h-24 rounded-lg object-cover"
                     />
@@ -476,7 +476,7 @@ function App() {
                         <Calendar className="w-4 h-4" />3 Days Ago
                       </div>
                       <p className="text-gray-400 text-sm line-clamp-2">
-                        {movie.preview}
+                        {movie.synopsis}
                       </p>
                     </div>
                   </div>
@@ -493,7 +493,7 @@ function App() {
                 {nextsMovies.reverse().map((movie) => (
                   <div key={movie.id} className="flex gap-4 items-start">
                     <img
-                      src={movie.poster}
+                      src={movie.posterUrl}
                       alt={movie.title}
                       className="w-24 h-24 rounded-lg object-cover"
                     />
@@ -504,7 +504,7 @@ function App() {
                         Estreno: {movie.year}
                       </div>
                       <div className="flex gap-2">
-                        {movie.genre.slice(0, 2).map((g, index) => (
+                        {movie.genres.slice(0, 2).map((g, index) => (
                           <span
                             key={index}
                             className="px-2 py-1 bg-gray-800 rounded-full text-xs font-medium text-gray-300"
@@ -521,137 +521,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 pt-16 pb-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div>
-              <h4 className="text-xl font-bold mb-6">Sobre Nosotros</h4>
-              <p className="text-gray-400 leading-relaxed">
-                Tu fuente definitiva de reseñas cinematográficas. Descubre,
-                explora y comparte tu pasión por el cine con nuestra comunidad
-                de cinéfilos.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold mb-6">Enlaces Útiles</h4>
-              <ul className="space-y-4">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2"
-                  >
-                    <Star className="w-4 h-4" /> Reseñas
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2"
-                  >
-                    <Film className="w-4 h-4" /> Peliculas
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2"
-                  >
-                    <MessageSquare className="w-4 h-4" /> Contacto
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold mb-6">Newsletter</h4>
-              <p className="text-gray-400 mb-4">
-                Suscríbete para recibir las últimas noticias y reseñas.
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Tu email"
-                  className="bg-gray-800 text-white px-4 py-3 rounded-l-lg flex-1 border border-gray-700 focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-all duration-300"
-                />
-                <button className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-r-lg transition-colors duration-300">
-                  <Mail className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold mb-6">Síguenos</h4>
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="bg-gray-800 p-3 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-300"
-                >
-                  <Facebook className="w-6 h-6" />
-                </a>
-                <a
-                  href="#"
-                  className="bg-gray-800 p-3 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-300"
-                >
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a
-                  href="#"
-                  className="bg-gray-800 p-3 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-300"
-                >
-                  <Instagram className="w-6 h-6" />
-                </a>
-                <a
-                  href="#"
-                  className="bg-gray-800 p-3 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-300"
-                >
-                  <Youtube className="w-6 h-6" />
-                </a>
-              </div>
-              <div className="mt-6">
-                <h5 className="font-semibold mb-4">Disponible en:</h5>{" "}
-                <div className="grid grid-cols-3 gap-3">
-                  {["Netflix", "HBO Max", "Prime"].map((platform) => (
-                    <div
-                      key={platform}
-                      className="bg-gray-800 p-3 rounded-lg flex items-center justify-center"
-                    >
-                      <Monitor className="w-5 h-5 text-gray-400" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400">
-                &copy; 2024 MovieReviews. Todos los derechos reservados.
-              </p>
-              <div className="flex gap-6 mt-4 md:mt-0">
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Privacidad
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Términos
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Cookies
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
