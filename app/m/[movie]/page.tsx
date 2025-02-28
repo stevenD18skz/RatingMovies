@@ -1,36 +1,18 @@
 import React from "react";
-
 import MovieDetail from "../../ui/movies/MovieDetail";
 import CarruselMovies from "../../ui/CarruselMovies";
-import { featuredMovies } from "../../lib/mockData";
-import { Movie } from "../../types/movie";
+import { getMovieByTitle, getSimilarMovies } from "../../lib/moviePort";
 
-interface PageParams {
-  params: { movie: string };
+interface PageProps {
+  params: Promise<{ movie: string }>;
 }
 
-const getMovieByTitle = async (title: string): Promise<Movie | undefined> => {
-  // Simulación de llamada API con retraso
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return featuredMovies.find((movie) => movie.title === title);
-};
+export default async function Page({ params }: PageProps) {
+  // Espera a que se resuelvan los parámetros
+  const resolvedParams = await params;
+  const movieTitle = decodeURIComponent(resolvedParams.movie);
 
-const getSimilarMovies = (selectedMovie: Movie): Movie[] => {
-  if (!selectedMovie.genres.length) return [];
-
-  const [primaryGenre] = selectedMovie.genres;
-  return featuredMovies
-    .filter(
-      (movie) =>
-        movie.id !== selectedMovie.id && movie.genres.includes(primaryGenre)
-    )
-    .slice(0, 10);
-};
-
-const MoviePage = async ({ params }: PageParams) => {
-  const decodedTitle = decodeURIComponent(params.movie);
-  const selectedMovie = await getMovieByTitle(decodedTitle);
-
+  const selectedMovie = await getMovieByTitle(movieTitle);
   if (!selectedMovie) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -39,14 +21,12 @@ const MoviePage = async ({ params }: PageParams) => {
     );
   }
 
-  const similarMovies = getSimilarMovies(selectedMovie);
+  const similarMovies = await getSimilarMovies(selectedMovie);
 
   return (
-    <div className="  ">
+    <div>
       <MovieDetail movie={selectedMovie} />
       <CarruselMovies movies={similarMovies} />
     </div>
   );
-};
-
-export default MoviePage;
+}

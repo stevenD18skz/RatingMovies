@@ -11,9 +11,9 @@ export const featuredMovies = [
     synopsis:
       "A young woman, Bella Baxter, is resurrected by a brilliant scientist and embarks on an odyssey of self-discovery.",
     posterUrl:
-      "https://i.pinimg.com/originals/76/71/5e/76715ecff73dbd26359a6216966eede4.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://images.bauerhosting.com/empire/2023/07/poor-things.jpg?ar=16:9&fit=crop&crop=top&auto=format&w=1440&q=80",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 2,
@@ -26,9 +26,10 @@ export const featuredMovies = [
     genres: ["Action", "Sci-Fi", "Adventure", "Fantasy", "Thriller"],
     synopsis:
       "In the year 2045, the real world is a harsh place. The only time Wade Watts truly feels alive is when he escapes to the OASIS...",
-    posterUrl: "https://m.media-amazon.com/images/I/71WAylLeCLL.jpg",
+    posterUrl:
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.c0q6NJYlJ3xK9UAj72yMFAHaLH?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 3,
@@ -42,9 +43,9 @@ export const featuredMovies = [
     synopsis:
       "A young getaway driver relies on his passion for music to be the best in the game. When he meets the girl of his dreams...",
     posterUrl:
-      "https://th.bing.com/th/id/OIP.wDsSqp7qBcMwER6j8xN-ywHaLA?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.wDsSqp7qBcMwER6j8xN-ywHaLA?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 4,
@@ -58,9 +59,9 @@ export const featuredMovies = [
     synopsis:
       "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland...",
     posterUrl:
-      "https://fr.web.img3.acsta.net/pictures/15/04/14/18/30/215297.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://fr.web.img3.acsta.net/pictures/15/04/14/18/30/215297.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 5,
@@ -74,9 +75,9 @@ export const featuredMovies = [
     synopsis:
       "A computer hacker is abducted into a digital world and forced to participate in gladiatorial games.",
     posterUrl:
-      "https://th.bing.com/th/id/OIP.DwUf_IPcQc0ANst2Jnhn4QHaKl?w=131&h=187&c=7&r=0&o=5&pid=1.7",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.DwUf_IPcQc0ANst2Jnhn4QHaKl?w=131&h=187&c=7&r=0&o=5&pid=1.7",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 6,
@@ -91,9 +92,9 @@ export const featuredMovies = [
     synopsis:
       "Two young girls move to the countryside and encounter a mystical forest spirit named Totoro.",
     posterUrl:
-      "https://th.bing.com/th/id/R.548566e8cf45dc11b59d13c12d5dbec0?rik=aeeJkyabBBcO%2fQ&riu=http%3a%2f%2fwww.cartelesmix.com%2fcarteles%2festrenos2009%2fmivecinototoro8803.jpg&ehk=5ZPAAdyJ%2bdhHskc94c2nB596NcISHCCWPnAWMuJZyb4%3d&risl=&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.548566e8cf45dc11b59d13c12d5dbec0?rik=aeeJkyabBBcO%2fQ&riu=http%3a%2f%2fwww.cartelesmix.com%2fcarteles%2festrenos2009%2fmivecinototoro8803.jpg&ehk=5ZPAAdyJ%2bdhHskc94c2nB596NcISHCCWPnAWMuJZyb4%3d&risl=&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 7,
@@ -124,9 +125,9 @@ export const featuredMovies = [
     synopsis:
       "Luffy and his crew attend a concert by Uta, a world-famous singer with a hidden past.",
     posterUrl:
-      "https://th.bing.com/th/id/R.3fb65148f9520a8aa183096570328e76?rik=gn42A1VyPhVl2w&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.3fb65148f9520a8aa183096570328e76?rik=gn42A1VyPhVl2w&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 9,
@@ -141,9 +142,9 @@ export const featuredMovies = [
     synopsis:
       "Un equipo de ilusionistas realiza robos bancarios durante sus espectáculos y los fondos se entregan a la audiencia.",
     posterUrl:
-      "https://th.bing.com/th/id/OIP.3n3N603r2lC2wsy5uvt6MAHaLH?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.3n3N603r2lC2wsy5uvt6MAHaLH?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 10,
@@ -158,9 +159,9 @@ export const featuredMovies = [
     synopsis:
       "Cuando el cuartel general de Kingsman es destruido, los agentes viajan a Estados Unidos para unirse a su organización hermana, Statesman, para detener a un enemigo común.",
     posterUrl:
-      "https://th.bing.com/th/id/R.51305ff156a3373d563c1093e4bdf0c8?rik=UlaRqwgY2TgNvg&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.51305ff156a3373d563c1093e4bdf0c8?rik=UlaRqwgY2TgNvg&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 11,
@@ -175,9 +176,9 @@ export const featuredMovies = [
     synopsis:
       "Un joven vikingo que aspira a cazar dragones se hace amigo de un dragón legendario y aprende que hay más en las criaturas de lo que pensaba.",
     posterUrl:
-      "https://th.bing.com/th/id/R.7bd7a9b697a89f374c8b4da1095ca139?rik=0wYLX8FXf34Mng&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.7bd7a9b697a89f374c8b4da1095ca139?rik=0wYLX8FXf34Mng&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 12,
@@ -192,9 +193,9 @@ export const featuredMovies = [
     synopsis:
       "La humanidad lucha por sobrevivir cuando monstruos gigantes, conocidos como MUTOs, se levantan para desafiar el dominio de Godzilla.",
     posterUrl:
-      "https://image.tmdb.org/t/p/original/1t0FcqSsBs51PDhDkFd7EiEytU6.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://image.tmdb.org/t/p/original/1t0FcqSsBs51PDhDkFd7EiEytU6.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 13,
@@ -226,9 +227,9 @@ export const featuredMovies = [
     synopsis:
       "Dos agentes de una organización secreta que supervisa la actividad extraterrestre en la Tierra deben evitar que un terrorista alienígena destruya el planeta.",
     posterUrl:
-      "https://th.bing.com/th/id/R.95fed080dda57bf7e09e9ea1131b03b4?rik=i7bdIm90bRB%2fPQ&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.95fed080dda57bf7e09e9ea1131b03b4?rik=i7bdIm90bRB%2fPQ&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 15,
@@ -243,9 +244,9 @@ export const featuredMovies = [
     synopsis:
       "En una realidad alternativa de 1985, un grupo de superhéroes retirados investiga el asesinato de uno de sus miembros y descubre una conspiración que podría cambiar el curso de la historia.",
     posterUrl:
-      "https://th.bing.com/th/id/OIP.8H2ulsU_4NeqD4wci3j0YgHaLf?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.8H2ulsU_4NeqD4wci3j0YgHaLf?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 16,
@@ -260,9 +261,9 @@ export const featuredMovies = [
     synopsis:
       "Un grupo de mutantes con habilidades extraordinarias lucha por proteger a la humanidad de una amenaza mutante radical.",
     posterUrl:
-      "https://th.bing.com/th/id/R.70a2f9351cdd6a0fc91ed5dffc14ef49?rik=Vc%2fgIvcAxwrIqA&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.70a2f9351cdd6a0fc91ed5dffc14ef49?rik=Vc%2fgIvcAxwrIqA&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 17,
@@ -277,9 +278,9 @@ export const featuredMovies = [
     synopsis:
       "Un asesino a sueldo llamado Ladybug se encuentra con otros asesinos a",
     posterUrl:
-      "https://www.themoviedb.org/t/p/original/tnPGFoeQpLznLplytqPjmvRIJ2F.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://www.themoviedb.org/t/p/original/tnPGFoeQpLznLplytqPjmvRIJ2F.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 18,
@@ -294,9 +295,9 @@ export const featuredMovies = [
     synopsis:
       "La familia de Ki-taek está muy unida, pero todos están desempleados. Sin ninguna perspectiva de futuro, el hijo mayor, Ki-woo, es recomendado por su amigo, un estudiante de una prestigiosa universidad, para un trabajo bien pagado como tutor, lo que da inicio a una retahíla de encuentros.",
     posterUrl:
-      "https://th.bing.com/th/id/OIP.0KZ917k5v8OgYflOwX_vhQHaEL?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.0KZ917k5v8OgYflOwX_vhQHaEL?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 19,
@@ -311,9 +312,9 @@ export const featuredMovies = [
     synopsis:
       "Chihiro y sus padres se ven obligados a detenerse en un túnel misterioso que lleva a otro mundo. Allí, sus padres son convertidos en cerdos y Chihiro se ve obligada a trabajar en una casa de baños para espíritus para sobrevivir.",
     posterUrl:
-      "https://image.tmdb.org/t/p/original/vlsi5iZcfDChKNGNvRp7Zp3SULH.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://image.tmdb.org/t/p/original/vlsi5iZcfDChKNGNvRp7Zp3SULH.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 20,
@@ -328,9 +329,9 @@ export const featuredMovies = [
     synopsis:
       "Un hobbit de la tranquila Comarca y un mago se embarcan en una épica aventura para destruir un anillo mágico y evitar que el Señor Oscuro Sauron conquiste la Tierra Media.",
     posterUrl:
-      "https://images-na.ssl-images-amazon.com/images/I/816QLZKwmIL.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://images-na.ssl-images-amazon.com/images/I/816QLZKwmIL.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 21,
@@ -345,9 +346,9 @@ export const featuredMovies = [
     synopsis:
       "Una aspirante a actriz y un pianista de jazz se enamoran mientras persiguen sus sueños en Los Ángeles.",
     posterUrl:
-      "https://th.bing.com/th/id/OIP.51jQD4ilf8uWPR6xFlGb7wHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.51jQD4ilf8uWPR6xFlGb7wHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 22,
@@ -362,9 +363,9 @@ export const featuredMovies = [
     synopsis:
       "Una joven llamada Sophie es maldecida por una bruja y convertida en anciana. Busca la ayuda de un mago llamado Howl y se ve envuelta en una guerra mágica.",
     posterUrl:
-      "https://www.themoviedb.org/t/p/original/5sSMmeqM3jdCtQWBFsqvfbEIsL7.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://www.themoviedb.org/t/p/original/5sSMmeqM3jdCtQWBFsqvfbEIsL7.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 23,
@@ -379,9 +380,9 @@ export const featuredMovies = [
     synopsis:
       "Un hombre insomne y un vendedor de jabón forman un club de lucha clandestino que se convierte en mucho más de lo que esperaban.",
     posterUrl:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Fight_Club_poster.jpg/220px-Fight_Club_poster.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Fight_Club_poster.jpg/220px-Fight_Club_poster.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 24,
@@ -396,9 +397,9 @@ export const featuredMovies = [
     synopsis:
       "La historia de la familia Corleone, una poderosa familia de la mafia italiana en Nueva York, y su ascenso al poder.",
     posterUrl:
-      "https://th.bing.com/th/id/R.f97ecf62eef2b3b57ba71192b309d738?rik=5cz8Hu39N6ZUHw&riu=http%3a%2f%2fdiariodeunacinefila.files.wordpress.com%2f2011%2f09%2fposter-de-el-padrino.jpg&ehk=WhgwF6xslFBh0RB%2f4n9G10tz%2fhYQjMig7nL8t%2bt9DHE%3d&risl=&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.f97ecf62eef2b3b57ba71192b309d738?rik=5cz8Hu39N6ZUHw&riu=http%3a%2f%2fdiariodeunacinefila.files.wordpress.com%2f2011%2f09%2fposter-de-el-padrino.jpg&ehk=WhgwF6xslFBh0RB%2f4n9G10tz%2fhYQjMig7nL8t%2bt9DHE%3d&risl=&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 25,
@@ -413,9 +414,9 @@ export const featuredMovies = [
     synopsis:
       "La historia de un hombre con un coeficiente intelectual bajo que vive una vida extraordinaria, presenciando y participando en algunos de los eventos más importantes de la historia de Estados Unidos.",
     posterUrl:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Forrest_Gump_poster.jpg/220px-Forrest_Gump_poster.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Forrest_Gump_poster.jpg/220px-Forrest_Gump_poster.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 26,
@@ -430,9 +431,9 @@ export const featuredMovies = [
     synopsis:
       "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
     posterUrl:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Matrix_Poster.jpg/220px-The_Matrix_Poster.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Matrix_Poster.jpg/220px-The_Matrix_Poster.jpg",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 27,
@@ -447,9 +448,9 @@ export const featuredMovies = [
     synopsis:
       "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a disturbed skinning murderer.",
     posterUrl:
-      "https://th.bing.com/th/id/R.83648afbf4854e5dcb0a487459232ea9?rik=%2bUA1v6M16msEWw&riu=http%3a%2f%2fwww.cartelesmix.com%2fcarteles%2fcarteles%2fletras%2fsilenciocorderos11.jpg&ehk=NmaLxo6HgeKKGs0nSK4iQFeMNLLPJsWr2n%2fU1YFObck%3d&risl=&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.83648afbf4854e5dcb0a487459232ea9?rik=%2bUA1v6M16msEWw&riu=http%3a%2f%2fwww.cartelesmix.com%2fcarteles%2fcarteles%2fletras%2fsilenciocorderos11.jpg&ehk=NmaLxo6HgeKKGs0nSK4iQFeMNLLPJsWr2n%2fU1YFObck%3d&risl=&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 28,
@@ -464,9 +465,9 @@ export const featuredMovies = [
     synopsis:
       "A man with short-term memory loss attempts to track down his wife's killer.",
     posterUrl:
-      "https://th.bing.com/th/id/OIP.DOMT-C0e9hysmxYwqq-s6gHaKX?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.DOMT-C0e9hysmxYwqq-s6gHaKX?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 29,
@@ -481,9 +482,9 @@ export const featuredMovies = [
     synopsis:
       "In 1930s, a detective investigates the murder of an American tycoon aboard a lavish train traveling through Europe.",
     posterUrl:
-      "https://th.bing.com/th/id/R.cceb6b9ac8e6fc80b1320a8ede0e1bb4?rik=6gRJag%2fLMPtmGw&riu=http%3a%2f%2fes.web.img3.acsta.net%2fpictures%2f17%2f07%2f05%2f09%2f37%2f477704.jpg&ehk=OVUd%2f7kX8t8zMyaa8KcuHymrJ8jQt%2fOzO7%2fDbZCoFyU%3d&risl=&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.cceb6b9ac8e6fc80b1320a8ede0e1bb4?rik=6gRJag%2fLMPtmGw&riu=http%3a%2f%2fes.web.img3.acsta.net%2fpictures%2f17%2f07%2f05%2f09%2f37%2f477704.jpg&ehk=OVUd%2f7kX8t8zMyaa8KcuHymrJ8jQt%2fOzO7%2fDbZCoFyU%3d&risl=&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 30,
@@ -498,9 +499,9 @@ export const featuredMovies = [
     synopsis:
       "In a future Britain, charismatic and psychopathic delinquent Alex DeLarge is jailed and volunteers for an experimental aversion therapy developed by the government in an effort to reduce crime.",
     posterUrl:
-      "https://th.bing.com/th/id/OIP.k7iY9B2Ij7c3ooHSisIIEgHaLM?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/OIP.k7iY9B2Ij7c3ooHSisIIEgHaLM?rs=1&pid=ImgDetMain",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 31,
@@ -515,9 +516,9 @@ export const featuredMovies = [
     synopsis:
       "A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who's been missing for thirty years.",
     posterUrl:
-      "https://th.bing.com/th/id/R.2c16c35610053ec14da2705309c18597?rik=sYFEA%2bdaDzjFSA&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
     heroposter:
-      "https://th.bing.com/th/id/R.2c16c35610053ec14da2705309c18597?rik=sYFEA%2bdaDzjFSA&pid=ImgRaw&r=0",
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 32,
@@ -531,8 +532,10 @@ export const featuredMovies = [
     genres: ["Animation", "Adventure", "Fantasy"],
     synopsis:
       "On a journey to find the cure for a Tatarigami curse, Ashitaka finds himself in the middle of a war between the forest gods and a mining colony. In the struggle to reconcile the two sides, he also meets San, the Princess Mononoke.",
-    posterUrl: "https://wallpapercave.com/wp/wp4108308.jpg",
-    heroposter: "https://wallpapercave.com/wp/wp4108308.jpg",
+    posterUrl:
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
+    heroposter:
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
   {
     id: 33,
@@ -546,8 +549,10 @@ export const featuredMovies = [
     genres: ["Drama", "Sci-Fi", "Thriller"],
     synopsis:
       "A linguist is recruited by the military to assist in translating alien communications after twelve mysterious spacecraft land around the world.",
-    posterUrl: "https://pics.filmaffinity.com/arrival-150207636-large.jpg",
-    heroposter: "https://pics.filmaffinity.com/arrival-150207636-large.jpg",
+    posterUrl:
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
+    heroposter:
+      "https://i.pinimg.com/originals/c5/5b/12/c55b124ddca12ac0165f57c90a09acba.jpg",
   },
 ];
 

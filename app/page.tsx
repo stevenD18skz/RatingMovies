@@ -1,31 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; // Hooks de React para gestionar el estado y efectos secundarios
+
+// Datos mockeados para pruebas en la UI
 import {
   heroMovies,
-  featuredMovies,
   recentMovies,
   nextsMovies,
   genres,
   years,
 } from "./lib/mockData";
 
+// Componentes UI para la página de inicio
 import { HeroCarousel } from "./ui/Landing/HeroCarrousel";
 import { Filters } from "./ui/Landing/Filters";
 import { MovieGridCard } from "./ui/Landing/MovieGridCard";
 import { MovieListItem } from "./ui/Landing/MovieListItem";
 import { Pagination } from "./ui/Landing/Pagination";
 import { FeaturedSection } from "./ui/Landing/FeaturedSection";
-import { Flame, Calendar } from "lucide-react";
-import SkeletonLanding from "./ui/Landing/SkeletonLanding";
+import SkeletonLanding from "./ui/Landing/SkeletonLanding"; // Versión de carga de la página
 
+// Iconos
+import { Flame, Calendar } from "lucide-react";
+
+// Tipos de datos
 import { Movie } from "./types/movie";
 
-const getAllMovies = async (): Promise<Movie[]> => {
-  // Simulación de llamada API con retraso
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return featuredMovies;
-};
+// Funciones de acceso a datos
+import { getAllMovies } from "./lib/moviePort";
 
 export default function Home() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -62,15 +64,6 @@ export default function Home() {
 
   // Filter movies based on search and filters
   const filteredMovies = allMovies.filter((movie) => {
-    console.log(
-      selectedGenre,
-      selectedYear,
-      searchQuery,
-      movie.title,
-      movie.synopsis,
-      movie.genres,
-      movie.releaseYear
-    );
     const matchesSearch =
       movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       movie.synopsis.toLowerCase().includes(searchQuery.toLowerCase());
