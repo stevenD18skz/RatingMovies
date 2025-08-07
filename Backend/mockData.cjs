@@ -1,4 +1,4 @@
-const featuredMovies = [
+const movies = [
   {
     id: 1,
     title: "Poor Things",
@@ -611,30 +611,30 @@ const featuredMovies = [
 ];
 
 const heroMovies = [
-  featuredMovies[34],
-  featuredMovies[0],
-  featuredMovies[1],
-  featuredMovies[2],
-  featuredMovies[3],
-  featuredMovies[16],
+  movies[34],
+  movies[0],
+  movies[1],
+  movies[2],
+  movies[3],
+  movies[16],
 ];
 
 const recentMovies = [
-  featuredMovies[0],
-  featuredMovies[1],
-  featuredMovies[2],
-  featuredMovies[3],
-  featuredMovies[4],
-  featuredMovies[5],
+  movies[0],
+  movies[1],
+  movies[2],
+  movies[3],
+  movies[4],
+  movies[5],
 ];
 
 const nextsMovies = [
-  featuredMovies[6],
-  featuredMovies[7],
-  featuredMovies[8],
-  featuredMovies[31],
-  featuredMovies[9],
-  featuredMovies[11],
+  movies[6],
+  movies[7],
+  movies[8],
+  movies[31],
+  movies[9],
+  movies[11],
 ];
 
 const genres = [
@@ -652,7 +652,7 @@ const genres = [
 ];
 
 module.exports = {
-  featuredMovies,
+  movies,
   heroMovies,
   recentMovies,
   nextsMovies,
