@@ -2,8 +2,8 @@ import React from "react";
 import MovieDetail from "../../ui/movies/MovieDetail";
 import CarruselMovies from "../../ui/movies/CarruselMovies";
 import {
-  getMovieByIdFromAPI,
-  getSimilarMoviesFromAPI,
+  getMovieById,
+  getSimilarMovies,
 } from "../../lib/moviePort";
 import { PackageOpen, Home, Search, ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -19,7 +19,7 @@ export default async function Page({ params }: PageProps) {
 
   console.log("movieId", movieId);
 
-  const selectedMovie = await getMovieByIdFromAPI(movieId);
+  const selectedMovie = await getMovieById(movieId);
 
   console.log("selectedMovie", selectedMovie);
 
@@ -104,7 +104,7 @@ export default async function Page({ params }: PageProps) {
     );
   }
 
-  const similarMovies = await getSimilarMoviesFromAPI(movieId);
+  const similarMovies = await getSimilarMovies(movieId);
 
   return (
     <div className="bg-[#0F172A]">

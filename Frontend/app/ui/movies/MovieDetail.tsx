@@ -1,10 +1,73 @@
 import React from "react";
-import { Star, Clock, Calendar, Play } from "lucide-react";
+import {
+  Star,
+  Clock,
+  Calendar,
+  Play,
+  Film,
+  TvMinimalPlay,
+  Popcorn,
+} from "lucide-react";
 import { Movie } from "../../types/movie";
+import AccorntG from "../AccorntG";
+import Link from "next/link";
 
 interface MovieDetailProps {
   movie: Movie;
 }
+
+export const reviews = [
+  {
+    username: "Monkey D. Luffy",
+    date: "March 15, 2024",
+    rating: 9.2,
+    comment:
+      "A visual masterpiece that perfectly captures the spirit of gaming culture. Spielberg's direction brings the virtual world to life in spectacular fashion.",
+    helpful: 423,
+    replies: 476,
+    avatar: "/avatars/luffy.png", // ruta ficticia
+  },
+  {
+    username: "Aria Winters",
+    date: "April 2, 2024",
+    rating: 8.8,
+    comment:
+      "Incredible visuals and a nostalgic trip for gamers. The pacing dipped a little in the middle, but overall an amazing experience.",
+    helpful: 312,
+    replies: 189,
+    avatar: "/avatars/aria.png",
+  },
+  {
+    username: "Kai Tanaka",
+    date: "April 20, 2024",
+    rating: 9.5,
+    comment:
+      "One of the best movie adaptations of a novel I've ever seen. Perfect blend of action, emotion, and geek culture.",
+    helpful: 540,
+    replies: 298,
+    avatar: "/avatars/kai.png",
+  },
+  {
+    username: "Sofia Delgado",
+    date: "May 5, 2024",
+    rating: 8.4,
+    comment:
+      "Great cast, exciting action scenes, and a fun story. Some references felt forced, but I still loved it.",
+    helpful: 276,
+    replies: 143,
+    avatar: "/avatars/sofia.png",
+  },
+  {
+    username: "Ethan Clarke",
+    date: "May 20, 2024",
+    rating: 9.0,
+    comment:
+      "The soundtrack and visuals blew me away. Felt like I was part of the OASIS myself!",
+    helpful: 390,
+    replies: 205,
+    avatar: "/avatars/ethan.png",
+  },
+];
 
 const RatingStars = ({ rating }: { rating: number }) => {
   const totalStars = 5;
@@ -71,7 +134,7 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
-      <div className="relative h-[60vh] overflow-hidden">
+      <div className="relative min-h-screen content-end overflow-hidden bg-red-300">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -80,135 +143,89 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ movie }) => {
           }}
         />
 
-        {/* Gradient Overlay */}
+        {/* Gradient Overlay  */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent" />
 
         {/* Content */}
-        <div className="relative h-full flex items-end">
-          <div className="container mx-auto px-6 pb-12">
-            <div className="flex flex-col lg:flex-row items-end gap-8">
-              {/* Poster */}
-              <div className="flex-shrink-0">
-                <img
-                  src={movie.poster_url}
-                  alt={`${movie.title} Poster`}
-                  className="w-48 h-72 object-cover rounded-lg shadow-2xl border-2 border-white/10"
-                />
-              </div>
+        <div className="relative container mx-auto px-6 pb-12  ">
+          <div className="">
+            {/* TOP */}
+            <div className="flex flex-col lg:flex-row items-center gap-8 py-16">
+              <img
+                src={movie.poster_url}
+                alt={`${movie.title} Poster`}
+                className=" w-[20rem] h-[30rem] object-cover rounded-lg shadow-2xl border-2 border-white/10"
+              />
 
               {/* Movie Info */}
-              <div className="flex-1 text-white">
-                <div className="mb-4">
-                  <h1 className="text-4xl lg:text-6xl font-bold mb-3 leading-tight">
-                    {movie.title}
-                  </h1>
-                  <div className="flex items-center gap-6 text-gray-300 text-sm">
-                    <span className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      {movie.release_year}
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      {movie.duration} min
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-xs">
-                      {movie.classification}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-3 mb-6">
-                  <RatingStars rating={movie.rating} />
-                  <span className="text-yellow-400 font-semibold">
-                    {movie.rating}/5
+              <div className="  left-16 max-w-2xl gap-4 flex flex-col">
+                <div className="flex items-center gap-4 text-lg">
+                  <span className="flex items-center gap-2">
+                    <Calendar className="w-6 h-6" /> {movie.release_year}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Clock className="w-6 h-6" /> {movie.duration} Min
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Film className="w-6 h-6" /> {movie.classification}
                   </span>
                 </div>
-
-                {/* Genres */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {movie.genres.map((genre) => (
-                    <span
-                      key={genre}
-                      className="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm border border-blue-500/30"
-                    >
-                      {genre}
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center">
+                    <Star className="w-8 h-8 text-[--gold]" />
+                    <span className="text-2xl font-bold ml-2">
+                      {movie.rating}
                     </span>
-                  ))}
+                    <span className="text-gray-400 ml-1">/5.0</span>
+                  </div>
+                  <div className="h-6 w-px bg-gray-800" />
+                  <span className="font-semibold">
+                    🏆 Best movie of the year
+                  </span>
                 </div>
-
-                <div className="flex items-center gap-2">
-                  {movie.trailer_url && (
-                    <a
-                      href={movie.trailer_url}
-                      target="_blank"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--red-light)] hover:bg-[var(--red-light)]/80 text-white rounded-lg transition-colors duration-200 font-medium"
-                    >
-                      <Play className="w-4 h-4" />
-                      Ver Trailer
-                    </a>
-                  )}
-
-                  <a
-                    href={`/review/${movie.id}`}
-                    target="_blank"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--gold)] hover:bg-[var(--gold)]/80 text-black rounded-lg transition-colors duration-200 font-medium"
+                <h1 className="text-7xl font-bold text-shadow">
+                  {movie.title}
+                </h1>
+                <div className="flex items-center gap-4">
+                  <Link
+                    href={`/m/${movie.title}`}
+                    className="flex items-center gap-2 bg-[--red-light] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
                   >
-                    <Play className="w-4 h-4" />
-                    Haz tu reseña
-                  </a>
+                    <TvMinimalPlay className="inline" /> Ver Mas Detalles
+                  </Link>
+                  <Link
+                    href={movie.trailer_url}
+                    className="flex items-center gap-2 bg-[--red-light] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    <Popcorn className="inline" /> Ver Tráiler
+                  </Link>
                 </div>
-                {/* Trailer Button */}
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  {movie.synopsis.length > 350
+                    ? movie.synopsis.slice(0, 350) + "..."
+                    : movie.synopsis}
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Synopsis Section */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-              <div className="w-1 h-8 bg-blue-500 rounded-full"></div>
-              Synopsis
-            </h2>
-            <p className="text-gray-300 leading-relaxed text-lg">
-              {movie.synopsis}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Additional Details */}
-      <div className="container mx-auto px-6 pb-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <h3 className="text-lg font-semibold mb-3 text-white">
-                Release Date
-              </h3>
-              <p className="text-gray-300">{movie.release_date}</p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <h3 className="text-lg font-semibold mb-3 text-white">
-                Duration
-              </h3>
-              <p className="text-gray-300">{movie.duration} minutes</p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <h3 className="text-lg font-semibold mb-3 text-white">Rating</h3>
-              <div className="flex items-center gap-2">
-                <RatingStars rating={movie.rating} />
-                <span className="text-yellow-400 font-semibold">
-                  {movie.rating}/5
+            {/* Genres */}
+            <div className="  flex flex-wrap gap-20 mb-6 col-span-2 items-center justify-center">
+              {movie.genres.map((genre) => (
+                <span
+                  key={genre}
+                  className="px-10 py-3   text-[--white] rounded-full text-lg   "
+                  style={{ backgroundColor: "rgba(255, 20, 87, 1)" }}
+                >
+                  {genre}
                 </span>
-              </div>
+              ))}
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        ola
       </div>
     </div>
   );

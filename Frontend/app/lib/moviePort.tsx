@@ -1,5 +1,13 @@
 import { Movie } from "../types/movie";
+import {
+  movies,
+  heroMovies,
+  recentMovies,
+  nextsMovies,
+  genres,
+} from "./mockData";
 
+const modo = process.env.NEXT_PUBLIC_MODO || "mock";
 // Función helper para obtener la URL base del API
 const getApiBaseUrl = () => {
   // En el servidor (Server Components), usar la URL del servicio Docker
@@ -10,8 +18,12 @@ const getApiBaseUrl = () => {
   return "http://localhost:3001";
 };
 
+//
+// ------------------------------------------------------------------------------------------------
+//
+
 // Función para obtener todas las películas desde el backend API
-export const getAllMoviesFromAPI = async (): Promise<Movie[]> => {
+const getAllMoviesFromAPI = async (): Promise<Movie[]> => {
   try {
     const response = await fetch(`${getApiBaseUrl()}/movies`);
 
@@ -27,10 +39,16 @@ export const getAllMoviesFromAPI = async (): Promise<Movie[]> => {
   }
 };
 
+const getAllMoviesFromMock = async (): Promise<Movie[]> => {
+  return movies;
+};
+
+//
+// ------------------------------------------------------------------------------------------------
+//
+
 // Función para obtener una película por ID desde el backend API
-export const getMovieByIdFromAPI = async (
-  movieId: string
-): Promise<Movie | null> => {
+const getMovieByIdFromAPI = async (movieId: string): Promise<Movie | null> => {
   try {
     const response = await fetch(`${getApiBaseUrl()}/movies/${movieId}`);
 
@@ -49,10 +67,17 @@ export const getMovieByIdFromAPI = async (
   }
 };
 
+const getMovieByIdFromMock = async (movieId: string): Promise<Movie | null> => {
+  const movie = movies.find((m: Movie) => m.title === movieId);
+  return movie || null;
+};
+
+//
+// ------------------------------------------------------------------------------------------------
+//
+
 // Nueva función para obtener películas similares desde el backend API
-export const getSimilarMoviesFromAPI = async (
-  movieId: string
-): Promise<Movie[]> => {
+const getSimilarMoviesFromAPI = async (movieId: string): Promise<Movie[]> => {
   try {
     const response = await fetch(
       `${getApiBaseUrl()}/movies/${movieId}/similar`
@@ -70,7 +95,17 @@ export const getSimilarMoviesFromAPI = async (
   }
 };
 
-export const getHeroMoviesFromAPI = async (): Promise<Movie[]> => {
+const getSimilarMoviesFromMock = async (movieId: string): Promise<Movie[]> => {
+  // TODO : Implementar lógica para obtener películas similares
+  return movies.slice(0, 10);
+};
+
+//
+// ------------------------------------------------------------------------------------------------
+//
+
+// Funcion para obtener las peliculas del hero desde el backend API
+const getHeroMoviesFromAPI = async (): Promise<Movie[]> => {
   try {
     const response = await fetch(`${getApiBaseUrl()}/hero-movies`);
 
@@ -86,7 +121,16 @@ export const getHeroMoviesFromAPI = async (): Promise<Movie[]> => {
   }
 };
 
-export const getTopMoviesFromAPI = async (): Promise<Movie[]> => {
+const getHeroMoviesFromMock = async (): Promise<Movie[]> => {
+  return heroMovies;
+};
+
+//
+// ------------------------------------------------------------------------------------------------
+//
+
+// Función para obtener las películas con mejor rating desde el backend API
+const getTopMoviesFromAPI = async (): Promise<Movie[]> => {
   try {
     const response = await fetch(`${getApiBaseUrl()}/top-movies`);
 
@@ -102,7 +146,16 @@ export const getTopMoviesFromAPI = async (): Promise<Movie[]> => {
   }
 };
 
-export const getRecentMoviesFromAPI = async (): Promise<Movie[]> => {
+const getTopMoviesFromMock = async (): Promise<Movie[]> => {
+  return movies.filter((movie: Movie) => movie.rating >= 8).slice(0, 10);
+};
+
+//
+// ------------------------------------------------------------------------------------------------
+//
+
+// Función para obtener las películas más recientes desde el backend API
+const getRecentMoviesFromAPI = async (): Promise<Movie[]> => {
   try {
     const response = await fetch(`${getApiBaseUrl()}/recent-movies`);
 
@@ -117,8 +170,16 @@ export const getRecentMoviesFromAPI = async (): Promise<Movie[]> => {
     return [];
   }
 };
+const getRecentMoviesFromMock = async (): Promise<Movie[]> => {
+  return recentMovies;
+};
 
-export const getNextsMoviesFromAPI = async (): Promise<Movie[]> => {
+//
+// ------------------------------------------------------------------------------------------------
+//
+
+// Función para obtener las próximas películas a estrenar desde el backend API
+const getNextsMoviesFromAPI = async (): Promise<Movie[]> => {
   try {
     const response = await fetch(`${getApiBaseUrl()}/nexts-movies`);
 
@@ -133,8 +194,16 @@ export const getNextsMoviesFromAPI = async (): Promise<Movie[]> => {
     return [];
   }
 };
+const getNextsMoviesFromMock = async (): Promise<Movie[]> => {
+  return nextsMovies;
+};
 
-export const getGenresFromAPI = async (): Promise<string[]> => {
+//
+// ------------------------------------------------------------------------------------------------
+//
+
+// Función para obtener los géneros de películas desde el backend API
+const getGenresFromAPI = async (): Promise<string[]> => {
   try {
     const response = await fetch(`${getApiBaseUrl()}/genres`);
 
@@ -149,3 +218,44 @@ export const getGenresFromAPI = async (): Promise<string[]> => {
     return [];
   }
 };
+const getGenresFromMock = async (): Promise<string[]> => {
+  return genres;
+};
+
+//
+// ------------------------------------------------------------------------------------------------
+//
+
+const api =
+  modo === "mock"
+    ? {
+        getAllMovies: getAllMoviesFromMock,
+        getMovieById: getMovieByIdFromMock,
+        getHeroMovies: getHeroMoviesFromMock,
+        getTopMovies: getTopMoviesFromMock,
+        getRecentMovies: getRecentMoviesFromMock,
+        getNextsMovies: getNextsMoviesFromMock,
+        getGenres: getGenresFromMock,
+        getSimilarMovies: getSimilarMoviesFromMock,
+      }
+    : {
+        getAllMovies: getAllMoviesFromAPI,
+        getMovieById: getMovieByIdFromAPI,
+        getHeroMovies: getHeroMoviesFromAPI,
+        getTopMovies: getTopMoviesFromAPI,
+        getRecentMovies: getRecentMoviesFromAPI,
+        getNextsMovies: getNextsMoviesFromAPI,
+        getGenres: getGenresFromAPI,
+        getSimilarMovies: getSimilarMoviesFromAPI,
+      };
+
+export const {
+  getAllMovies,
+  getMovieById,
+  getHeroMovies,
+  getTopMovies,
+  getRecentMovies,
+  getNextsMovies,
+  getGenres,
+  getSimilarMovies,
+} = api;

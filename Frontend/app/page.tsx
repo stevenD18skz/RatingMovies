@@ -20,12 +20,12 @@ import { Movie } from "./types/movie";
 
 // Funciones de acceso a datos
 import {
-  getAllMoviesFromAPI,
-  getHeroMoviesFromAPI,
-  getGenresFromAPI,
-  getRecentMoviesFromAPI,
-  getNextsMoviesFromAPI,
-  getTopMoviesFromAPI,
+  getAllMovies,
+  getHeroMovies,
+  getGenres,
+  getRecentMovies,
+  getNextsMovies,
+  getTopMovies,
 } from "./lib/moviePort";
 
 export default function Home() {
@@ -49,22 +49,22 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(true);
-    getHeroMoviesFromAPI().then((movies) => {
+    getHeroMovies().then((movies) => {
       setHeroMovies(movies);
     });
-    getTopMoviesFromAPI().then((movies) => {
+    getTopMovies().then((movies) => {
       setTopMovies(movies);
     });
-    getGenresFromAPI().then((genres) => {
+    getGenres().then((genres) => {
       setGenres(genres);
     });
-    getRecentMoviesFromAPI().then((movies) => {
+    getRecentMovies().then((movies) => {
       setRecentMovies(movies);
     });
-    getNextsMoviesFromAPI().then((movies) => {
+    getNextsMovies().then((movies) => {
       setNextsMovies(movies);
     });
-    getAllMoviesFromAPI().then((movies) => {
+    getAllMovies().then((movies) => {
       setAllMovies(movies);
       setLoading(false);
     });
