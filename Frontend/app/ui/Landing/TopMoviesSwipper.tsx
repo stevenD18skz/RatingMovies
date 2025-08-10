@@ -16,6 +16,7 @@ export default function TopMoviesSwipper({
 }: {
   readonly movies: readonly Movie[];
 }) {
+  console.log(movies)
   return (
     <>
       <link

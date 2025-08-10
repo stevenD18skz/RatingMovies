@@ -147,9 +147,11 @@ const getTopMoviesFromAPI = async (): Promise<Movie[]> => {
 };
 
 const getTopMoviesFromMock = async (): Promise<Movie[]> => {
-  return movies.filter((movie: Movie) => movie.rating >= 8).slice(0, 10);
+  return movies
+    .slice() // copiamos para no mutar el array original
+    .sort((a: Movie, b: Movie) => b.rating - a.rating) // de mayor a menor
+    .slice(0, 10); // top 10
 };
-
 //
 // ------------------------------------------------------------------------------------------------
 //
