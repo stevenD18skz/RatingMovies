@@ -1,134 +1,24 @@
-import React, { act } from "react";
-
-import CarruselMovies from "../../ui/movies/CarruselMovies";
+import React from "react";
 import { getMovieById, getSimilarMovies } from "../../lib/moviePort";
-import { PackageOpen, Home, Search, ArrowLeft } from "lucide-react";
+import {
+  PackageOpen,
+  Home,
+  Search,
+  ArrowLeft,
+  CircleArrowOutUpRight,
+  Play,
+} from "lucide-react";
 import Link from "next/link";
-
 import { Movie } from "../../types/movie";
-
 import {
   ThumbsUp,
   Star,
   Clock,
   Calendar,
-  Play,
   Film,
-  TvMinimalPlay,
   Popcorn,
   MessageSquareReply,
 } from "lucide-react";
-
-interface PageProps {
-  params: Promise<{ movie: string }>;
-}
-
-interface Review {
-  username: string;
-  date: string;
-  rating: number;
-  comment: string;
-  helpful: number;
-  replies: number;
-  avatar: string;
-}
-
-interface Actor {
-  name: string;
-  character: string;
-  urlPhoto: string;
-}
-
-export const reviews = [
-  {
-    username: "Monkey D. Luffy",
-    date: "March 15, 2024",
-    rating: 4.2,
-    comment:
-      "A visual masterpiece that perfectly captures the spirit of gaming culture. Spielberg's direction brings the virtual world to life in spectacular fashion.",
-    helpful: 423,
-    replies: 476,
-    avatar:
-      "https://i.pinimg.com/1200x/92/23/4a/92234a0d461079114707be651ed6ff19.jpg", // ruta ficticia
-  },
-  {
-    username: "Aria Winters",
-    date: "April 2, 2024",
-    rating: 3.8,
-    comment:
-      "Incredible visuals and a nostalgic trip for gamers. The pacing dipped a little in the middle, but overall an amazing experience.",
-    helpful: 312,
-    replies: 189,
-    avatar:
-      "https://i.pinimg.com/736x/08/da/ce/08dace7744930a8b0ef546d9cad6c3ec.jpg",
-  },
-  {
-    username: "Kai Tanaka",
-    date: "April 20, 2024",
-    rating: 4.5,
-    comment:
-      "One of the best movie adaptations of a novel I've ever seen. Perfect blend of action, emotion, and geek culture.",
-    helpful: 540,
-    replies: 298,
-    avatar:
-      "https://i.pinimg.com/736x/40/4a/9c/404a9c078184881d9420234f878217a5.jpg",
-  },
-  {
-    username: "Sofia Delgado",
-    date: "May 5, 2024",
-    rating: 3.4,
-    comment:
-      "Great cast, exciting action scenes, and a fun story. Some references felt forced, but I still loved it.",
-    helpful: 276,
-    replies: 143,
-    avatar:
-      "https://i.pinimg.com/1200x/54/68/a8/5468a8e62ff5867b60407fa0dfa278d4.jpg",
-  },
-  {
-    username: "Ethan Clarke",
-    date: "May 20, 2024",
-    rating: 4.6,
-    comment:
-      "The soundtrack and visuals blew me away. Felt like I was part of the OASIS myself!",
-    helpful: 390,
-    replies: 205,
-    avatar:
-      "https://i.pinimg.com/736x/66/0f/c4/660fc432fe037cfeb16a1c907c896389.jpg",
-  },
-];
-
-export const castAndCrew = [
-  {
-    name: "Tye Sheridan",
-    character: "Wade Watts / Parzival",
-    urlPhoto:
-      "https://tse4.mm.bing.net/th/id/OIP.8RogcCGpSZtH5LKe9zaX5gHaJ3?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    name: "Olivia Cooke",
-    character: "Samantha Cook / Art3mis",
-    urlPhoto:
-      "https://tse1.mm.bing.net/th/id/OIP.qVzhNpjuGo_O5qCOecdtGAHaK2?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    name: "Ben Mendelsohn",
-    character: "Nolan Sorrento",
-    urlPhoto:
-      "https://tse4.mm.bing.net/th/id/OIP.NFIVqNRG3SG6UscKyywknAHaJ_?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    name: "Mark Rylance",
-    character: "James Halliday / Anorak",
-    urlPhoto:
-      "https://tse4.mm.bing.net/th/id/OIP.OMjKsfPCKq8Z_QHjZnXHUQHaLA?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    name: "Simon Pegg",
-    character: "Curator",
-    urlPhoto:
-      "https://m.media-amazon.com/images/M/MV5BNzMwODE1NjA3OV5BMl5BanBnXkFtZTgwNTY5MzM2OTE@._V1_FMjpg_UX1000_.jpg",
-  },
-];
 
 const RatingStars = ({
   rating,
@@ -199,7 +89,17 @@ const RatingStars = ({
   );
 };
 
-const ReviewComment = ({ review }: { review: Review }) => {
+interface Review {
+  username: string;
+  date: string;
+  rating: number;
+  comment: string;
+  helpful: number;
+  replies: number;
+  avatar: string;
+}
+
+const CommentItem = ({ review }: { review: Review }) => {
   return (
     <div className="rating-container bg-[#1F2937] p-4 rounded-lg flex flex-col gap-4">
       {/* perfil and start */}
@@ -245,19 +145,186 @@ const ReviewComment = ({ review }: { review: Review }) => {
   );
 };
 
-const CastActor = ({ actor }: { actor: Actor }) => {
+export const reviews = [
+  {
+    username: "Monkey D. Luffy",
+    date: "March 15, 2024",
+    rating: 4.2,
+    comment:
+      "A visual masterpiece that perfectly captures the spirit of gaming culture. Spielberg's direction brings the virtual world to life in spectacular fashion.",
+    helpful: 423,
+    replies: 476,
+    avatar:
+      "https://i.pinimg.com/1200x/92/23/4a/92234a0d461079114707be651ed6ff19.jpg", // ruta ficticia
+  },
+  {
+    username: "Aria Winters",
+    date: "April 2, 2024",
+    rating: 3.8,
+    comment:
+      "Incredible visuals and a nostalgic trip for gamers. The pacing dipped a little in the middle, but overall an amazing experience.",
+    helpful: 312,
+    replies: 189,
+    avatar:
+      "https://i.pinimg.com/736x/08/da/ce/08dace7744930a8b0ef546d9cad6c3ec.jpg",
+  },
+  {
+    username: "Kai Tanaka",
+    date: "April 20, 2024",
+    rating: 4.5,
+    comment:
+      "One of the best movie adaptations of a novel I've ever seen. Perfect blend of action, emotion, and geek culture.",
+    helpful: 540,
+    replies: 298,
+    avatar:
+      "https://i.pinimg.com/736x/40/4a/9c/404a9c078184881d9420234f878217a5.jpg",
+  },
+  {
+    username: "Sofia Delgado",
+    date: "May 5, 2024",
+    rating: 3.4,
+    comment:
+      "Great cast, exciting action scenes, and a fun story. Some references felt forced, but I still loved it.",
+    helpful: 276,
+    replies: 143,
+    avatar:
+      "https://i.pinimg.com/1200x/54/68/a8/5468a8e62ff5867b60407fa0dfa278d4.jpg",
+  },
+  {
+    username: "Ethan Clarke",
+    date: "May 20, 2024",
+    rating: 4.6,
+    comment:
+      "The soundtrack and visuals blew me away. Felt like I was part of the OASIS myself!",
+    helpful: 390,
+    replies: 205,
+    avatar:
+      "https://i.pinimg.com/736x/66/0f/c4/660fc432fe037cfeb16a1c907c896389.jpg",
+  },
+];
+
+interface Actor {
+  name: string;
+  character: string;
+  urlPhoto: string;
+}
+
+const ActorItem = ({ actor }: { actor: Actor }) => {
   return (
     <div className="flex flex-col items-center">
       <img
         src={actor.urlPhoto}
         alt={`photo of ${actor.name}`}
-        className="h-[20rem]"
+        className="w-[18rem] h-[28rem]"
       />
       <p className="font-bold fonr-[--white] text-xl">{actor.name}</p>
       <p className="font-gray-300 text-md">{actor.character}</p>
     </div>
   );
 };
+
+export const castAndCrew = [
+  {
+    name: "Tye Sheridan",
+    character: "Wade Watts / Parzival",
+    urlPhoto:
+      "https://tse4.mm.bing.net/th/id/OIP.8RogcCGpSZtH5LKe9zaX5gHaJ3?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+  },
+  {
+    name: "Olivia Cooke",
+    character: "Samantha Cook / Art3mis",
+    urlPhoto:
+      "https://tse1.mm.bing.net/th/id/OIP.qVzhNpjuGo_O5qCOecdtGAHaK2?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+  },
+  {
+    name: "Ben Mendelsohn",
+    character: "Nolan Sorrento",
+    urlPhoto:
+      "https://tse4.mm.bing.net/th/id/OIP.NFIVqNRG3SG6UscKyywknAHaJ_?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+  },
+  {
+    name: "Mark Rylance",
+    character: "James Halliday / Anorak",
+    urlPhoto:
+      "https://tse4.mm.bing.net/th/id/OIP.OMjKsfPCKq8Z_QHjZnXHUQHaLA?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+  },
+  {
+    name: "Simon Pegg",
+    character: "Curator",
+    urlPhoto:
+      "https://m.media-amazon.com/images/M/MV5BNzMwODE1NjA3OV5BMl5BanBnXkFtZTgwNTY5MzM2OTE@._V1_FMjpg_UX1000_.jpg",
+  },
+  {
+    name: "T. J. Miller",
+    character: "I-ROK",
+    urlPhoto:
+      "https://tse4.mm.bing.net/th/id/OIP.s-jPNwVzq6FctX7yZTy4cQHaJ4?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+  },
+];
+
+interface Media {
+  title: string;
+  ulrPoster: string;
+  urlMedia: string;
+}
+
+const MediaItem = ({ media }: { media: Media }) => {
+  return (
+    <a
+      href={media.urlMedia}
+      target="_blank"
+      className="relative group hover:scale-110 transition-all duration-300 hover:shadow-2xl rounded-xl w-[30rem]  "
+    >
+      <img
+        src={media.ulrPoster}
+        alt=""
+        className="h-full w-full group-hover:brightness-110 transition-all duration-300"
+      />
+
+      <div className="bg-gradient-to-t from-black/70 to-black/30 absolute bottom-0 left-0 h-full w-full group-hover:opacity-90 transition-all duration-300"></div>
+
+      <h5 className="absolute bottom-3 left-2 text-3xl group-hover:text-4xl transition-all duration-300 text-gray-300  ">
+        {media.title}
+      </h5>
+
+      <CircleArrowOutUpRight className="absolute opacity-0 group-hover:opacity-100 text-2xl text-gray-300  transition-all duration-300 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
+    </a>
+  );
+};
+
+const mediaReadyPlayerOne: Media[] = [
+  {
+    title: "Ready Player One",
+    ulrPoster:
+      "https://www.rollingstone.com/wp-content/uploads/2018/06/readyplayerone-56b7d103-d459-4ff3-89ac-e6342be40e01.jpg",
+    urlMedia: "https://www.youtube.com/watch?v=iQR8Zs0zid0",
+  },
+  {
+    title: "Van Halen - Jump",
+    ulrPoster:
+      "https://i.ytimg.com/vi/SwYN7mTi6HM/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLCzSrgtGjv6e1fmxMIzXsxxwlxg7A",
+    urlMedia:
+      "https://www.youtube.com/watch?v=SwYN7mTi6HM&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR",
+  },
+  {
+    title: "a-ha - Take On Me",
+    ulrPoster:
+      "https://i.ytimg.com/vi/djV11Xbc914/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAQwo9yAPdIq9l3Z7w40_sAH6_uQw",
+    urlMedia:
+      "https://www.youtube.com/watch?v=djV11Xbc914&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR&index=4",
+  },
+  {
+    title: "Bee Gees - Stayin' Alive",
+    ulrPoster:
+      "https://i.ytimg.com/vi/fNFzfwLM72c/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAEJd8FLCCljKGV0DCkfHWbhZ33Xw",
+    urlMedia:
+      "https://www.youtube.com/watch?v=fNFzfwLM72c&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR&index=8",
+  },
+];
+
+interface PageProps {
+  params: Promise<{ movie: string }>;
+}
 
 export default async function Page({ params }: PageProps) {
   // Espera a que se resuelvan los parámetros
@@ -283,8 +350,8 @@ export default async function Page({ params }: PageProps) {
 
           {/* Mensaje secundario */}
           <p className="text-gray-400 text-center mb-8 max-w-md text-lg">
-            Lo sentimos, no pudimos encontrar la película "{movieId}". Verifica
-            el nombre o intenta buscar otra película.
+            Lo sentimos, no pudimos encontrar la película &ldquo;{movieId}
+            &rdquo;. Verifica el nombre o intenta buscar otra película.
           </p>
 
           {/* Botones de acción */}
@@ -347,6 +414,7 @@ export default async function Page({ params }: PageProps) {
     );
   }
 
+  console.log(movieId);
   const similarMovies = await getSimilarMovies(movieId);
 
   return (
@@ -468,9 +536,20 @@ export default async function Page({ params }: PageProps) {
 
             {/* reviews */}
             <div className="container mx-auto flex flex-col gap-6">
-              <h3 className="text-4xl font-bold">User Reviews</h3>
+              <div className="flex justify-between items-center">
+                <h3 className="text-4xl font-bold">User Reviews</h3>
+                <a
+                  href="https://www.imdb.com/es/title/tt1677720/ratings/?ref_=tt_ov_rat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-blue-500 hover:text-blue-700 transition-colors"
+                >
+                  View more
+                </a>
+              </div>
+
               {reviews.slice(0, 3).map((review2, idx) => (
-                <ReviewComment key={idx} review={review2} />
+                <CommentItem key={idx} review={review2} />
               ))}
             </div>
           </div>
@@ -526,29 +605,56 @@ export default async function Page({ params }: PageProps) {
               <h3 className="text-4xl font-bold pb-2">Where to watch</h3>
 
               <div className="flex flex-row gap-4">
-                <div className="border border-yellow-700 rounded-3xl w-24 h-24 overflow-hidden">
+                <a
+                  href="https://www.netflix.com/co/title/81696722"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-yellow-700 rounded-3xl w-24 h-24 overflow-hidden"
+                >
                   <img
                     src="https://i.pinimg.com/originals/72/a0/50/72a0500ff35991d147a6b48e4bffc721.jpg"
                     alt="logo netflix"
-                    className=" object-fit h-full w-full"
+                    className=" object-cover h-full w-full"
                   />
-                </div>
+                </a>
 
-                <div className="border border-yellow-700 rounded-3xl w-24 h-24 overflow-hidden">
+                <a
+                  href="https://www.primevideo.com/region/na/detail?gti=amzn1.dv.gti.78b680ff-76d5-f11d-300c-65263d116eaa&irclickid=a9db9612N764011f0b0eed5a42d545d6&ref=dvm_ass_acm_xx_mf_s_imp_a9db9612N764011f0b0eed5a42d545d6&irgwc=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-yellow-700 rounded-3xl w-24 h-24 overflow-hidden"
+                >
                   <img
                     src="https://tse2.mm.bing.net/th/id/OIP.EweJBEPMfuDZFtXAB2YuqQHaHa?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3"
                     alt="logo netflix"
-                    className=" object-fit h-full w-full"
+                    className=" object-cover h-full w-full"
                   />
-                </div>
+                </a>
 
-                <div className="border border-yellow-700 rounded-3xl w-24 h-24 overflow-hidden">
+                <a
+                  href="https://www.hbomax.com/co/es/movies/ready-player-one-comienza-el-juego/09d36d79-eff3-4c2d-9300-bbd8ab11eaa5?utm_source=universal_search"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-yellow-700 rounded-3xl w-24 h-24 overflow-hidden"
+                >
                   <img
                     src="https://www.trecebits.com/wp-content/uploads/2025/05/hbo-max-logo-negro.jpg.webp"
                     alt="logo netflix"
-                    className=" object-fit h-full w-full"
+                    className=" object-cover h-full w-full"
                   />
-                </div>
+                </a>
+                <a
+                  href="https://tv.apple.com/co/movie/ready-player-one-comienza-el-juego/umc.cmc.295lpojxtonf6dqc4za2i97lr?playableId=tvs.sbd.9001%3A1354248992"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-yellow-700 rounded-3xl w-24 h-24 overflow-hidden"
+                >
+                  <img
+                    src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/03/apple-tv-logo-2661899.jpg?tf=3840x"
+                    alt="logo netflix"
+                    className=" object-cover h-full w-full"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -560,7 +666,7 @@ export default async function Page({ params }: PageProps) {
 
           <div className="flex gap-6 ">
             {castAndCrew.map((actor) => (
-              <CastActor key={actor.name} actor={actor} />
+              <ActorItem key={actor.name} actor={actor} />
             ))}
           </div>
         </div>
@@ -569,20 +675,45 @@ export default async function Page({ params }: PageProps) {
         <div className="px-4 py-6">
           <h3 className="text-4xl font-bold">Media</h3>
 
-          <div className="flex gap-6 ">
-            <div>
-              <img
-                src="https://www.rollingstone.com/wp-content/uploads/2018/06/readyplayerone-56b7d103-d459-4ff3-89ac-e6342be40e01.jpg"
-                alt=""
-                className="h-40"
-              />
-
-              <h5 className=" ">Oasis Virtual World</h5>
-            </div>
+          <div className="flex gap-8 ">
+            {mediaReadyPlayerOne.map((media) => (
+              <MediaItem key={media.title} media={media} />
+            ))}
           </div>
         </div>
 
-        <CarruselMovies movies={similarMovies} />
+        <section className="  mx-auto">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold">Similar Movies</h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4  ">
+            {similarMovies.map((movie) => (
+              <Link
+                href={`/m/${movie.title}`}
+                key={movie.id}
+                className="group cursor-pointer transform hover:scale-105 transition-transform"
+              >
+                <div className="relative aspect-[2/3] mb-2 rounded-lg overflow-hidden">
+                  <img
+                    src={movie.poster_url}
+                    alt={`${movie.title} poster`}
+                    //fill
+                    className="object-cover w-full h-full"
+                    sizes="(max-width: 900px) 60vw, (max-width: 1200px) 53vw, 40vw"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Play className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="font-semibold truncate hover:text-blue-600">
+                  {movie.title}
+                </h3>
+                <p className="text-sm text-gray-400">{movie.release_year}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

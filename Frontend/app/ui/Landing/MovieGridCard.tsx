@@ -1,4 +1,4 @@
-import { Star, Calendar, Clock, Play, Eye, TvMinimalPlay } from "lucide-react";
+import { Star, Calendar, Clock, Eye, TvMinimalPlay } from "lucide-react";
 import Link from "next/link";
 import { Movie } from "../../types/movie";
 import "./MovieGridCard.css";

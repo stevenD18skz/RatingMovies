@@ -11,7 +11,7 @@ export default function page({ movies }: { movies: Movie[] }) {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {movies.map((movie) => (
+        {movies.slice(0, 6).map((movie) => (
           <Link
             href={`/m/${movie.title}`}
             key={movie.id}

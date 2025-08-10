@@ -2,17 +2,13 @@ import React, { useRef } from "react";
 import "./AccorntG.css";
 
 interface ButtonGProps {
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   children?: React.ReactNode;
-  type?: "button" | "submit" | "reset";
   url?: string;
   text?: string;
 }
 
 const ButtonG: React.FC<ButtonGProps> = ({
-  onClick,
   children,
-  type = "button",
   url = "",
   text = "BLANK",
 }) => {
@@ -60,7 +56,7 @@ const ButtonG: React.FC<ButtonGProps> = ({
       ref={buttonRef}
       className={`btn ripple-btn`}
       onMouseDown={(e) => {
-      createRipple(e as React.MouseEvent<HTMLAnchorElement>);
+        createRipple(e as React.MouseEvent<HTMLAnchorElement>);
       }}
       onMouseUp={endRipple}
       onMouseLeave={endRipple}

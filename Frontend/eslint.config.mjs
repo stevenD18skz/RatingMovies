@@ -9,15 +9,18 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
+export default [
+  // Convierte el config viejo de Next.js a flat
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Convierte el plugin de TypeScript recomendado
+  ...compat.extends("plugin:@typescript-eslint/recommended"),
+
+  // Tus reglas personalizadas
   {
-    extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
     rules: {
       "@next/next/no-img-element": "off",
       "@typescript-eslint/no-explicit-any": "off",
     },
   },
 ];
-
-export default eslintConfig;

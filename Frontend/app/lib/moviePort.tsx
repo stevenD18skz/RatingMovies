@@ -95,9 +95,27 @@ const getSimilarMoviesFromAPI = async (movieId: string): Promise<Movie[]> => {
   }
 };
 
-const getSimilarMoviesFromMock = async (movieId: string): Promise<Movie[]> => {
-  // TODO : Implementar lógica para obtener películas similares
-  return movies.slice(0, 10);
+const getSimilarMoviesFromMock = async (
+  movieTitle: string
+): Promise<Movie[]> => {
+  // Buscar la película base
+  const baseMovie = movies.find(
+    (m) => m.title.toLowerCase() === movieTitle.toLowerCase()
+  );
+  if (!baseMovie) return [];
+
+  // Filtrar películas que compartan al menos un género y que no sean la misma
+  const similarMovies = movies.filter((m) => {
+    if (m.title.toLowerCase() === baseMovie.title.toLowerCase()) return false;
+    return (
+      m.genres.filter((genre) => baseMovie.genres.includes(genre)).length >= 2
+    );
+  });
+
+  console.log(similarMovies);
+
+  // Limitar a 6 resultados
+  return similarMovies.sort(() => Math.random() - 0.5).slice(0, 6);
 };
 
 //

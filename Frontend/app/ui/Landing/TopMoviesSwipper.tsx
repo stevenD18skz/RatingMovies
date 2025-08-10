@@ -16,14 +16,9 @@ export default function TopMoviesSwipper({
 }: {
   readonly movies: readonly Movie[];
 }) {
-  console.log(movies)
+  console.log(movies);
   return (
     <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;700;900&display=swap"
-        rel="stylesheet"
-      />
-
       <h3 className="text-4xl font-bold mb-8 ml-4">Las Mejores Peliculas</h3>
 
       <Swiper
