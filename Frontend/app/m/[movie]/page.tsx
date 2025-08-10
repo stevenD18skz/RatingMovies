@@ -1,5 +1,5 @@
 import React, { act } from "react";
-import MovieDetail from "../../ui/movies/MovieDetail";
+
 import CarruselMovies from "../../ui/movies/CarruselMovies";
 import { getMovieById, getSimilarMovies } from "../../lib/moviePort";
 import { PackageOpen, Home, Search, ArrowLeft } from "lucide-react";
@@ -409,13 +409,8 @@ export default async function Page({ params }: PageProps) {
 
                 <div className="flex items-center gap-4">
                   <Link
-                    href={`/m/${movie.title}`}
-                    className="flex items-center gap-2 bg-[--red-light] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
-                  >
-                    <TvMinimalPlay className="inline" /> Ver Mas Detalles
-                  </Link>
-                  <Link
                     href={movie.trailer_url}
+                    target="_blank"
                     className="flex items-center gap-2 bg-[--red-light] text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
                   >
                     <Popcorn className="inline" /> Ver Tráiler

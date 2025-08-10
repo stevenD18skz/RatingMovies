@@ -74,6 +74,9 @@ export default function Home() {
 
   // Sort movies based on selected sort
   const sortedMovies = allMovies.slice().sort((a, b) => {
+    const lista = allMovies.map((m) => m.title);
+    console.log(lista)
+
     if (selectedSort === "A-Z") {
       return a.title.localeCompare(b.title);
     }

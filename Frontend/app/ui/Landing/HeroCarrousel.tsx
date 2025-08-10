@@ -128,7 +128,8 @@ export function HeroCarousel({
                 width: `${100 / moviesH.length}%`,
                 backgroundImage: `url("${movie.hero_poster}")`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: " center",
+                backgroundRepeat: "no-repeat",
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50" />
