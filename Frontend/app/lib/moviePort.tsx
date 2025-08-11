@@ -1,6 +1,13 @@
 import { Movie } from "../types/movie";
+import { Review } from "../types/review";
+import { Actor } from "../types/actor";
+import { Media } from "../types/media";
+
 import {
   movies,
+  reviewsMovie,
+  actorsMovie,
+  mediaMovie,
   heroMovies,
   recentMovies,
   nextsMovies,
@@ -41,6 +48,31 @@ const getAllMoviesFromAPI = async (): Promise<Movie[]> => {
 
 const getAllMoviesFromMock = async (): Promise<Movie[]> => {
   return movies;
+};
+
+//
+// ------------------------------------------------------------------------------------------------
+//
+
+const getReviewByMovieFromMock = async (
+  movieTitle: string
+): Promise<Review[]> => {
+  const reviewsMovie2 = reviewsMovie as Record<string, Review[]>;
+  return reviewsMovie2[movieTitle] ?? reviewsMovie2["Ready Player One"];
+};
+
+const getActorByMovieFromMock = async (
+  movieTitle: string
+): Promise<Actor[]> => {
+  const actorsMovie2 = actorsMovie as Record<string, Actor[]>;
+  return actorsMovie2[movieTitle] ?? actorsMovie2["Ready Player One"];
+};
+
+const getMediaByMovieFromMock = async (
+  movieTitle: string
+): Promise<Media[]> => {
+  const mediaMovie2 = mediaMovie as Record<string, Media[]>;
+  return mediaMovie2[movieTitle] ?? mediaMovie2["Ready Player One"];
 };
 
 //
@@ -251,6 +283,11 @@ const api =
     ? {
         getAllMovies: getAllMoviesFromMock,
         getMovieById: getMovieByIdFromMock,
+        //
+        getReviewsMovie: getReviewByMovieFromMock,
+        getActorByMovie: getActorByMovieFromMock,
+        getMediaByMovie: getMediaByMovieFromMock,
+        //
         getHeroMovies: getHeroMoviesFromMock,
         getTopMovies: getTopMoviesFromMock,
         getRecentMovies: getRecentMoviesFromMock,
@@ -261,6 +298,11 @@ const api =
     : {
         getAllMovies: getAllMoviesFromAPI,
         getMovieById: getMovieByIdFromAPI,
+        //
+        getReviewsMovie: getReviewByMovieFromMock,
+        getActorByMovie: getActorByMovieFromMock,
+        getMediaByMovie: getMediaByMovieFromMock,
+        //
         getHeroMovies: getHeroMoviesFromAPI,
         getTopMovies: getTopMoviesFromAPI,
         getRecentMovies: getRecentMoviesFromAPI,
@@ -272,6 +314,11 @@ const api =
 export const {
   getAllMovies,
   getMovieById,
+  //
+  getReviewsMovie,
+  getActorByMovie,
+  getMediaByMovie,
+  //
   getHeroMovies,
   getTopMovies,
   getRecentMovies,

@@ -11,9 +11,9 @@ const movies = [
     synopsis:
       "En el año 2045, el mundo sufre crisis económica, social y ambiental. La mayoría de las personas escapan a la dura realidad a través de OASIS, un enorme universo de realidad virtual donde se puede estudiar, trabajar, jugar y vivir aventuras. Cuando su creador, James Halliday, muere, deja un desafío: un “huevo de pascua” escondido en OASIS. Quien lo encuentre heredará toda su fortuna y el control total del mundo virtual. El joven Wade Watts, obsesionado con la cultura de los 80 y con la vida de Halliday, se lanza a la búsqueda. Enfrentará enigmas, rivales y peligros tanto en el mundo virtual como en el real, compitiendo contra una corporación sin escrúpulos que quiere controlar OASIS para sus propios fines. Es una historia de aventura, nostalgia gamer y crítica social, con muchas referencias a videojuegos, películas, música y series clásicas.",
     poster_url:
-      "https://th.bing.com/th/id/R.1717cf334c3df9d3c5ad5d7e5955353f?rik=lEKm4V%2f4cTKFlw&riu=http%3a%2f%2fwww.slashfilm.com%2fwp%2fwp-content%2fimages%2freadyplayerone-teaserposter-full.jpg&ehk=XrWEx2BP3LXqI%2fiVCLPsPfTCru1fRb2G%2bR06fahMfkw%3d&risl=&pid=ImgRaw&r=0",
+      "https://images.hdqwalls.com/download/4k-ready-player-one-movie-poster-3y-1242x2668.jpg",
     hero_poster:
-      "https://th.bing.com/th/id/R.1717cf334c3df9d3c5ad5d7e5955353f?rik=lEKm4V%2f4cTKFlw&riu=http%3a%2f%2fwww.slashfilm.com%2fwp%2fwp-content%2fimages%2freadyplayerone-teaserposter-full.jpg&ehk=XrWEx2BP3LXqI%2fiVCLPsPfTCru1fRb2G%2bR06fahMfkw%3d&risl=&pid=ImgRaw&r=0",
+      "https://www.themoviedb.org/t/p/original/4DWu2yBNDi7kbwFnj3Fpaq3P2hC.jpg",
     trailer_url:
       "https://www.youtube.com/results?search_query=Ready+Player+One+trailer",
   },
@@ -119,9 +119,9 @@ const movies = [
     synopsis:
       "Cuando el cuartel general de Kingsman es destruido, los agentes viajan a Estados Unidos para unirse a su organización hermana, Statesman, para detener a un enemigo común.",
     poster_url:
-      "https://th.bing.com/th/id/R.51305ff156a3373d563c1093e4bdf0c8?rik=UlaRqwgY2TgNvg&pid=ImgRaw&r=0",
+      "https://tse4.mm.bing.net/th/id/OIP.DyMGIjBsbUm8CeVP5YUfHQHaJ3?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
     hero_poster:
-      "https://th.bing.com/th/id/R.51305ff156a3373d563c1093e4bdf0c8?rik=UlaRqwgY2TgNvg&pid=ImgRaw&r=0",
+      "https://tse4.mm.bing.net/th/id/OIP.DyMGIjBsbUm8CeVP5YUfHQHaJ3?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
     trailer_url:
       "https://www.youtube.com/results?search_query=Kingsman+The+Secret+Service+trailer",
   },
@@ -1072,6 +1072,1150 @@ const movies = [
   },
 ];
 
+const reviewsMovie = {
+  "Ready Player One": [
+    {
+      username: "Monkey D. Luffy",
+      date: "March 15, 2024",
+      rating: 4.2,
+      comment:
+        "A visual masterpiece that perfectly captures the spirit of gaming culture. Spielberg's direction brings the virtual world to life in spectacular fashion.",
+      helpful: 423,
+      replies: 476,
+      avatar:
+        "https://i.pinimg.com/1200x/92/23/4a/92234a0d461079114707be651ed6ff19.jpg",
+    },
+    {
+      username: "Aria Winters",
+      date: "April 2, 2024",
+      rating: 3.8,
+      comment:
+        "Incredible visuals and a nostalgic trip for gamers. The pacing dipped a little in the middle, but overall an amazing experience.",
+      helpful: 312,
+      replies: 189,
+      avatar:
+        "https://i.pinimg.com/736x/08/da/ce/08dace7744930a8b0ef546d9cad6c3ec.jpg",
+    },
+    {
+      username: "Kai Tanaka",
+      date: "April 20, 2024",
+      rating: 4.5,
+      comment:
+        "One of the best movie adaptations of a novel I've ever seen. Perfect blend of action, emotion, and geek culture.",
+      helpful: 540,
+      replies: 298,
+      avatar:
+        "https://i.pinimg.com/736x/40/4a/9c/404a9c078184881d9420234f878217a5.jpg",
+    },
+  ],
+  "John Wick": [
+    {
+      username: "Viktor Steele",
+      date: "June 10, 2023",
+      rating: 4.7,
+      comment:
+        "Keanu Reeves is a force of nature! The action is relentless, and the world-building around the assassins is top-notch.",
+      helpful: 650,
+      replies: 320,
+      avatar:
+        "https://i.pinimg.com/736x/12/ab/34/12ab34cd567890ef1234567890abcdef.jpg",
+    },
+    {
+      username: "Luna Vega",
+      date: "July 5, 2023",
+      rating: 4.3,
+      comment:
+        "Stylish and brutal. The fight choreography is insane, though the plot is a bit thin. Still, I couldn’t look away!",
+      helpful: 480,
+      replies: 210,
+      avatar:
+        "https://i.pinimg.com/736x/56/78/90/567890ab1234567890cdef1234567890.jpg",
+    },
+    {
+      username: "Jaxon Holt",
+      date: "August 1, 2023",
+      rating: 4.0,
+      comment:
+        "Pure adrenaline from start to finish. The dog subplot hit me hard, but it’s what makes John Wick so iconic.",
+      helpful: 395,
+      replies: 175,
+      avatar:
+        "https://i.pinimg.com/736x/78/90/ab/7890ab1234567890cdef1234567890ab.jpg",
+    },
+  ],
+  "Baby Driver": [
+    {
+      username: "Zoe Harper",
+      date: "September 12, 2023",
+      rating: 4.4,
+      comment:
+        "The soundtrack drives this movie! Edgar Wright’s direction and the perfectly synced action make it a thrilling ride.",
+      helpful: 510,
+      replies: 260,
+      avatar:
+        "https://i.pinimg.com/736x/34/56/78/345678cd901234567890abcdef123456.jpg",
+    },
+    {
+      username: "Miles Cruz",
+      date: "October 3, 2023",
+      rating: 4.1,
+      comment:
+        "Ansel Elgort nails it as Baby. The car chases are epic, but the romance felt a bit rushed for me.",
+      helpful: 420,
+      replies: 190,
+      avatar:
+        "https://i.pinimg.com/736x/90/ab/cd/90abcd1234567890cdef1234567890ab.jpg",
+    },
+    {
+      username: "Tara Quinn",
+      date: "November 15, 2023",
+      rating: 4.6,
+      comment:
+        "A masterpiece of style and sound. Every scene feels like a music video, but with heart and stakes.",
+      helpful: 580,
+      replies: 300,
+      avatar:
+        "https://i.pinimg.com/736x/ab/cd/ef/abcdef1234567890cdef1234567890ab.jpg",
+    },
+  ],
+  "Mad Max: Fury Road": [
+    {
+      username: "Rex Fury",
+      date: "January 20, 2023",
+      rating: 4.8,
+      comment:
+        "Non-stop chaos in the best way possible. Charlize Theron as Furiosa steals the show. A visual and emotional triumph.",
+      helpful: 720,
+      replies: 400,
+      avatar:
+        "https://i.pinimg.com/736x/cd/ef/12/cdef1234567890abcdef1234567890ab.jpg",
+    },
+    {
+      username: "Nia Blaze",
+      date: "February 10, 2023",
+      rating: 4.5,
+      comment:
+        "The practical effects and world-building are unreal. It’s like a fever dream of action and grit.",
+      helpful: 600,
+      replies: 310,
+      avatar:
+        "https://i.pinimg.com/736x/ef/12/34/ef1234567890abcdef1234567890abcd.jpg",
+    },
+    {
+      username: "Gus Vroom",
+      date: "March 5, 2023",
+      rating: 4.3,
+      comment:
+        "Insane action and stunning visuals, but I wanted more backstory for Max. Still, what a wild ride!",
+      helpful: 490,
+      replies: 220,
+      avatar:
+        "https://i.pinimg.com/736x/12/34/56/1234567890abcdef1234567890abcdef.jpg",
+    },
+  ],
+  "The Mitchells vs. the Machines": [
+    {
+      username: "Ella Sparks",
+      date: "April 15, 2024",
+      rating: 4.3,
+      comment:
+        "Hilarious and heartfelt! The animation is vibrant, and the family dynamics are so relatable.",
+      helpful: 450,
+      replies: 230,
+      avatar:
+        "https://i.pinimg.com/736x/34/56/78/34567890abcdef1234567890abcdef12.jpg",
+    },
+    {
+      username: "Liam Brooks",
+      date: "May 1, 2024",
+      rating: 4.0,
+      comment:
+        "A fun, chaotic adventure with great humor. Some jokes didn’t land for me, but the robot apocalypse was epic.",
+      helpful: 380,
+      replies: 180,
+      avatar:
+        "https://i.pinimg.com/736x/56/78/90/567890abcdef1234567890abcdef1234.jpg",
+    },
+    {
+      username: "Ava Chen",
+      date: "June 10, 2024",
+      rating: 4.6,
+      comment:
+        "Loved the quirky animation and the message about family. The Furby scene had me in tears laughing!",
+      helpful: 520,
+      replies: 270,
+      avatar:
+        "https://i.pinimg.com/736x/78/90/ab/7890abcdef1234567890abcdef123456.jpg",
+    },
+  ],
+  "Deadpool 2": [
+    {
+      username: "Wade Wilson Jr.",
+      date: "July 20, 2023",
+      rating: 4.4,
+      comment:
+        "Ryan Reynolds is perfect as Deadpool. The humor and action are dialed up, and Cable is a great addition.",
+      helpful: 560,
+      replies: 290,
+      avatar:
+        "https://i.pinimg.com/736x/ab/cd/ef/abcdef1234567890abcdef1234567890.jpg",
+    },
+    {
+      username: "Chloe Fang",
+      date: "August 5, 2023",
+      rating: 4.1,
+      comment:
+        "Laughed so hard I cried. The meta jokes are gold, but some felt a bit overdone. Still a blast!",
+      helpful: 430,
+      replies: 200,
+      avatar:
+        "https://i.pinimg.com/736x/cd/ef/12/cdef1234567890abcdef1234567890ab.jpg",
+    },
+    {
+      username: "Tyler Zane",
+      date: "September 1, 2023",
+      rating: 4.5,
+      comment:
+        "Action, humor, and heart. The X-Force scenes were hilarious, and the soundtrack is killer.",
+      helpful: 510,
+      replies: 250,
+      avatar:
+        "https://i.pinimg.com/736x/ef/12/34/ef1234567890abcdef1234567890abcd.jpg",
+    },
+  ],
+  "Kingsman: The Secret Service": [
+    {
+      username: "James Bonded",
+      date: "October 10, 2023",
+      rating: 4.6,
+      comment:
+        "A fresh take on the spy genre! The action is over-the-top, and Colin Firth is surprisingly badass.",
+      helpful: 590,
+      replies: 310,
+      avatar:
+        "https://i.pinimg.com/736x/12/34/56/1234567890abcdef1234567890abcdef.jpg",
+    },
+    {
+      username: "Sophie Lane",
+      date: "November 5, 2023",
+      rating: 4.2,
+      comment:
+        "Stylish and fun with great fight scenes. The church sequence is insane, but the humor didn’t always land.",
+      helpful: 460,
+      replies: 220,
+      avatar:
+        "https://i.pinimg.com/736x/34/56/78/34567890abcdef1234567890abcdef12.jpg",
+    },
+    {
+      username: "Evan Cole",
+      date: "December 1, 2023",
+      rating: 4.4,
+      comment:
+        "Taron Egerton shines as Eggsy. The mix of humor, action, and spy gadgets is perfection.",
+      helpful: 500,
+      replies: 240,
+      avatar:
+        "https://i.pinimg.com/736x/56/78/90/567890abcdef1234567890abcdef1234.jpg",
+    },
+  ],
+  "Bullet Train": [
+    {
+      username: "Ryu Kimura",
+      date: "January 15, 2024",
+      rating: 4.3,
+      comment:
+        "Brad Pitt is effortlessly cool. The action is wild, and the humor keeps it light. Loved the cameos!",
+      helpful: 530,
+      replies: 280,
+      avatar:
+        "https://i.pinimg.com/736x/78/90/ab/7890abcdef1234567890abcdef123456.jpg",
+    },
+    {
+      username: "Maya Holt",
+      date: "February 10, 2024",
+      rating: 4.0,
+      comment:
+        "Fast-paced and fun, but the plot gets a bit messy. The ensemble cast makes it worth watching.",
+      helpful: 410,
+      replies: 190,
+      avatar:
+        "https://i.pinimg.com/736x/ab/cd/ef/abcdef1234567890abcdef1234567890.jpg",
+    },
+    {
+      username: "Leo Sparks",
+      date: "March 5, 2024",
+      rating: 4.5,
+      comment:
+        "A chaotic, stylish ride. The train setting and quirky characters make every scene pop.",
+      helpful: 490,
+      replies: 230,
+      avatar:
+        "https://i.pinimg.com/736x/cd/ef/12/cdef1234567890abcdef1234567890ab.jpg",
+    },
+  ],
+  "Murder on the Orient Express": [
+    {
+      username: "Clara Poirot",
+      date: "April 10, 2024",
+      rating: 4.1,
+      comment:
+        "A classic mystery brought to life with stunning visuals. Kenneth Branagh’s Poirot is captivating.",
+      helpful: 470,
+      replies: 240,
+      avatar:
+        "https://i.pinimg.com/736x/ef/12/34/ef1234567890abcdef1234567890abcd.jpg",
+    },
+    {
+      username: "Henry Walsh",
+      date: "May 5, 2024",
+      rating: 3.8,
+      comment:
+        "Great cast and atmosphere, but the pacing felt slow at times. Still, a solid whodunit.",
+      helpful: 390,
+      replies: 180,
+      avatar:
+        "https://i.pinimg.com/736x/12/34/56/1234567890abcdef1234567890abcdef.jpg",
+    },
+    {
+      username: "Isabelle Grey",
+      date: "June 1, 2024",
+      rating: 4.4,
+      comment:
+        "Loved the elegance and suspense. The train setting and costumes are a feast for the eyes.",
+      helpful: 510,
+      replies: 260,
+      avatar:
+        "https://i.pinimg.com/736x/34/56/78/34567890abcdef1234567890abcdef12.jpg",
+    },
+  ],
+  "Knives Out": [
+    {
+      username: "Marta Sleuth",
+      date: "July 15, 2023",
+      rating: 4.7,
+      comment:
+        "Rian Johnson reinvents the murder mystery! Daniel Craig and Ana de Armas are phenomenal.",
+      helpful: 680,
+      replies: 350,
+      avatar:
+        "https://i.pinimg.com/736x/56/78/90/567890abcdef1234567890abcdef1234.jpg",
+    },
+    {
+      username: "Owen Finch",
+      date: "August 10, 2023",
+      rating: 4.4,
+      comment:
+        "Witty, clever, and full of twists. The ensemble cast is perfect, though some reveals were predictable.",
+      helpful: 520,
+      replies: 270,
+      avatar:
+        "https://i.pinimg.com/736x/78/90/ab/7890abcdef1234567890abcdef123456.jpg",
+    },
+    {
+      username: "Grace Lin",
+      date: "September 5, 2023",
+      rating: 4.6,
+      comment:
+        "A modern classic. The humor, mystery, and family drama blend so well. Can’t wait for the sequel!",
+      helpful: 590,
+      replies: 300,
+      avatar:
+        "https://i.pinimg.com/736x/ab/cd/ef/abcdef1234567890abcdef1234567890.jpg",
+    },
+  ],
+  "Now You See Me": [
+    {
+      username: "HoudiniFan23",
+      date: "October 10, 2023",
+      rating: 4.2,
+      comment:
+        "Magic and heists? Count me in! The twists kept me guessing, and the cast has great chemistry.",
+      helpful: 460,
+      replies: 230,
+      avatar:
+        "https://i.pinimg.com/736x/cd/ef/12/cdef1234567890abcdef1234567890ab.jpg",
+    },
+    {
+      username: "Emma Stone",
+      date: "November 5, 2023",
+      rating: 3.9,
+      comment:
+        "Super fun and flashy, but the plot gets convoluted. Still, the magic tricks are a blast to watch.",
+      helpful: 400,
+      replies: 190,
+      avatar:
+        "https://i.pinimg.com/736x/ef/12/34/ef1234567890abcdef1234567890abcd.jpg",
+    },
+    {
+      username: "Noah Blake",
+      date: "December 1, 2023",
+      rating: 4.4,
+      comment:
+        "Loved the energy and cleverness. The final twist blew my mind, even if it’s a bit far-fetched.",
+      helpful: 480,
+      replies: 250,
+      avatar:
+        "https://i.pinimg.com/736x/12/34/56/1234567890abcdef1234567890abcdef.jpg",
+    },
+  ],
+  "The Truman Show": [
+    {
+      username: "Elliot Truth",
+      date: "January 15, 2024",
+      rating: 4.8,
+      comment:
+        "Jim Carrey’s best role. A brilliant commentary on reality, freedom, and media. Still relevant today.",
+      helpful: 710,
+      replies: 380,
+      avatar:
+        "https://i.pinimg.com/736x/34/56/78/34567890abcdef1234567890abcdef12.jpg",
+    },
+    {
+      username: "Sarah Dawn",
+      date: "February 10, 2024",
+      rating: 4.5,
+      comment:
+        "Thought-provoking and emotional. The concept is genius, though the pacing slows a bit in the middle.",
+      helpful: 550,
+      replies: 290,
+      avatar:
+        "https://i.pinimg.com/736x/56/78/90/567890abcdef1234567890abcdef1234.jpg",
+    },
+    {
+      username: "Lucas Wren",
+      date: "March 5, 2024",
+      rating: 4.7,
+      comment:
+        "A masterpiece of storytelling. The way it balances humor, drama, and philosophy is incredible.",
+      helpful: 620,
+      replies: 310,
+      avatar:
+        "https://i.pinimg.com/736x/78/90/ab/7890abcdef1234567890abcdef123456.jpg",
+    },
+  ],
+};
+
+const actorsMovie = {
+  "Ready Player One": [
+    {
+      name: "Tye Sheridan",
+      character: "Wade Watts / Parzival",
+      urlPhoto:
+        "https://tse4.mm.bing.net/th/id/OIP.8RogcCGpSZtH5LKe9zaX5gHaJ3?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+      name: "Olivia Cooke",
+      character: "Samantha Cook / Art3mis",
+      urlPhoto:
+        "https://tse1.mm.bing.net/th/id/OIP.qVzhNpjuGo_O5qCOecdtGAHaK2?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+      name: "Ben Mendelsohn",
+      character: "Nolan Sorrento",
+      urlPhoto:
+        "https://tse4.mm.bing.net/th/id/OIP.NFIVqNRG3SG6UscKyywknAHaJ_?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+      name: "Mark Rylance",
+      character: "James Halliday / Anorak",
+      urlPhoto:
+        "https://tse4.mm.bing.net/th/id/OIP.OMjKsfPCKq8Z_QHjZnXHUQHaLA?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+    {
+      name: "Simon Pegg",
+      character: "Curator",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BNzMwODE1NjA3OV5BMl5BanBnXkFtZTgwNTY5MzM2OTE@._V1_FMjpg_UX1000_.jpg",
+    },
+    {
+      name: "T. J. Miller",
+      character: "I-ROK",
+      urlPhoto:
+        "https://tse4.mm.bing.net/th/id/OIP.s-jPNwVzq6FctX7yZTy4cQHaJ4?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+    },
+  ],
+  "John Wick": [
+    {
+      name: "Keanu Reeves",
+      character: "John Wick",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODczMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Michael Nyqvist",
+      character: "Viggo Tarasov",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA3OTQ1MjcwNl5BMl5BanBnXkFtZTcwODkwNzgxOA@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Alfie Allen",
+      character: "Iosef Tarasov",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk3NjM2MDI0NF5BMl5BanBnXkFtZTgwNTQ0NzE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Willem Dafoe",
+      character: "Marcus",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTM3NTE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "John Leguizamo",
+      character: "Aurelio",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQ2NzA0NjE0M15BMl5BanBnXkFtZTcwNzU5NTcwMw@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Ian McShane",
+      character: "Winston",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDMyMTc2MQ@._V1_UY1200_.jpg",
+    },
+  ],
+  "Baby Driver": [
+    {
+      name: "Ansel Elgort",
+      character: "Baby",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjAwNjM5ODQyOV5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Kevin Spacey",
+      character: "Doc",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQyMTM3MTY2MF5BMl5BanBnXkFtZTcwMjk4NjA4Mg@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Lily James",
+      character: "Debora",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk0NzI5MTYxMF5BMl5BanBnXkFtZTgwNTE3NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Jon Hamm",
+      character: "Buddy",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTM0NjI3NjYxN15BMl5BanBnXkFtZTcwNjA0NzY2Mw@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Jamie Foxx",
+      character: "Bats",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTM0NzYzNDgxMl5BMl5BanBnXkFtZTcwNDg0NzcxMw@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Eiza González",
+      character: "Darling",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg0OTY4ODMyOF5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+  ],
+  "Mad Max: Fury Road": [
+    {
+      name: "Tom Hardy",
+      character: "Max Rockatansky",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQ2MTEyMjMzMV5BMl5BanBnXkFtZTgwODE3NDM0MjE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Charlize Theron",
+      character: "Imperator Furiosa",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTUyMTE0NjUxNV5BMl5BanBnXkFtZTcwOTA1ODc5NA@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Nicholas Hoult",
+      character: "Nux",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA3NDM5MDE3NF5BMl5BanBnXkFtZTgwNzQwNjE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Hugh Keays-Byrne",
+      character: "Immortan Joe",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjE0NjIxODMxNF5BMl5BanBnXkFtZTcwMDM1OTYxOA@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Rosie Huntington-Whiteley",
+      character: "The Splendid Angharad",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg0OTY4ODMyOF5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Zoë Kravitz",
+      character: "Toast the Knowing",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA5Nzg1NjM0NV5BMl5BanBnXkFtZTgwOTk3MzYxMDE@._V1_UY1200_.jpg",
+    },
+  ],
+  "The Mitchells vs. the Machines": [
+    {
+      name: "Abbi Jacobson",
+      character: "Katie Mitchell (voice)",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg3NzY2NjU3NF5BMl5BanBnXkFtZTgwNjQ4ODc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Danny McBride",
+      character: "Rick Mitchell (voice)",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA3NDM5MDE3NF5BMl5BanBnXkFtZTgwNzQwNjE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Maya Rudolph",
+      character: "Linda Mitchell (voice)",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDMyMTc2MQ@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Mike Rianda",
+      character: "Aaron Mitchell (voice)",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg0OTY4ODMyOF5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Eric André",
+      character: "Mark Bowman (voice)",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk0NzI5MTYxMF5BMl5BanBnXkFtZTgwNTE3NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Olivia Colman",
+      character: "PAL (voice)",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA5NzA1NjM0NV5BMl5BanBnXkFtZTgwOTk3MzYxMDE@._V1_UY1200_.jpg",
+    },
+  ],
+  "Deadpool 2": [
+    {
+      name: "Ryan Reynolds",
+      character: "Wade Wilson / Deadpool",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk1MjE0Nzk1M15BMl5BanBnXkFtZTgwOTU4NTg4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Josh Brolin",
+      character: "Cable",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk1MjE0Nzk1M15BMl5BanBnXkFtZTgwOTU4NTg4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Morena Baccarin",
+      character: "Vanessa",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk3NjM2MDI0NF5BMl5BanBnXkFtZTgwNTQ0NzE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Zazie Beetz",
+      character: "Domino",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg0OTY4ODMyOF5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Julian Dennison",
+      character: "Firefist",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA5NzA1NjM0NV5BMl5BanBnXkFtZTgwOTk3MzYxMDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "T.J. Miller",
+      character: "Weasel",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTU1NjQ2OTI2MF5BMl5BanBnXkFtZTcwNzY5NjE4OA@._V1_UY1200_.jpg",
+    },
+  ],
+  "Kingsman: The Secret Service": [
+    {
+      name: "Taron Egerton",
+      character: "Gary 'Eggsy' Unwin",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTkwMTA0NTY5NF5BMl5BanBnXkFtZTgwNzM5NjI3MjE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Colin Firth",
+      character: "Harry Hart / Galahad",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTc4NjA2OTMwMl5BMl5BanBnXkFtZTcwNzA4NzY2Mw@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Samuel L. Jackson",
+      character: "Valentine",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQ2MjgyOTQ5Ml5BMl5BanBnXkFtZTcwNjY2NjA4Mg@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Mark Strong",
+      character: "Merlin",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk0NzI5MTYxMF5BMl5BanBnXkFtZTgwNTE3NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Sophie Cookson",
+      character: "Roxy",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA3NDM5MDE3NF5BMl5BanBnXkFtZTgwNzQwNjE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Michael Caine",
+      character: "Arthur",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQyMTM3MTY2MF5BMl5BanBnXkFtZTcwMjk4NjA4Mg@._V1_UY1200_.jpg",
+    },
+  ],
+  "Bullet Train": [
+    {
+      name: "Brad Pitt",
+      character: "Ladybug",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA2NTM2NzU3MF5BMl5BanBnXkFtZTgwNzI0NjE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Joey King",
+      character: "Prince",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg0OTY4ODMyOF5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Aaron Taylor-Johnson",
+      character: "Tangerine",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA5NzA1NjM0NV5BMl5BanBnXkFtZTgwOTk3MzYxMDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Brian Tyree Henry",
+      character: "Lemon",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk0NzI5MTYxMF5BMl5BanBnXkFtZTgwNTE3NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Andrew Koji",
+      character: "Kimura",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg3NzY2NjU3NF5BMl5BanBnXkFtZTgwNjQ4ODc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Hiroyuki Sanada",
+      character: "The Elder",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDMyMTc2MQ@._V1_UY1200_.jpg",
+    },
+  ],
+  "Murder on the Orient Express": [
+    {
+      name: "Kenneth Branagh",
+      character: "Hercule Poirot",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk0NzI5MTYxMF5BMl5BanBnXkFtZTgwNTE3NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Penélope Cruz",
+      character: "Pilar Estravados",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQzNjMyMzI4N15BMl5BanBnXkFtZTcwMzY0NzM2Mw@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Willem Dafoe",
+      character: "Gerhard Hardman",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTM3NTE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Judi Dench",
+      character: "Princess Dragomiroff",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQyMTM3MTY2MF5BMl5BanBnXkFtZTcwMjk4NjA4Mg@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Johnny Depp",
+      character: "Ratchett",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTM0NzYzNDgxMl5BMl5BanBnXkFtZTcwNDg0NzcxMw@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Michelle Pfeiffer",
+      character: "Caroline Hubbard",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTU1NjQ2OTI2MF5BMl5BanBnXkFtZTcwNzY5NjE4OA@._V1_UY1200_.jpg",
+    },
+  ],
+  "Knives Out": [
+    {
+      name: "Daniel Craig",
+      character: "Benoit Blanc",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA2NTM2NzU3MF5BMl5BanBnXkFtZTgwNzI0NjE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Ana de Armas",
+      character: "Marta Cabrera",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg0OTY4ODMyOF5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Chris Evans",
+      character: "Ransom Drysdale",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk3NjM2MDI0NF5BMl5BanBnXkFtZTgwNTQ0NzE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Jamie Lee Curtis",
+      character: "Linda Drysdale",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQyMTM3MTY2MF5BMl5BanBnXkFtZTcwMjk4NjA4Mg@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Michael Shannon",
+      character: "Walt Thrombey",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTU1NjQ2OTI2MF5BMl5BanBnXkFtZTcwNzY5NjE4OA@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Toni Collette",
+      character: "Joni Thrombey",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA5NzA1NjM0NV5BMl5BanBnXkFtZTgwOTk3MzYxMDE@._V1_UY1200_.jpg",
+    },
+  ],
+  "Now You See Me": [
+    {
+      name: "Jesse Eisenberg",
+      character: "J. Daniel Atlas",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA3NDM5MDE3NF5BMl5BanBnXkFtZTgwNzQwNjE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Mark Ruffalo",
+      character: "Dylan Rhodes",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODczMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Woody Harrelson",
+      character: "Merritt McKinney",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk0NzI5MTYxMF5BMl5BanBnXkFtZTgwNTE3NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Isla Fisher",
+      character: "Henley Reeves",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg0OTY4ODMyOF5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Dave Franco",
+      character: "Jack Wilder",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA5NzA1NjM0NV5BMl5BanBnXkFtZTgwOTk3MzYxMDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Mélanie Laurent",
+      character: "Alma Dray",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDMyMTc2MQ@._V1_UY1200_.jpg",
+    },
+  ],
+  "The Truman Show": [
+    {
+      name: "Jim Carrey",
+      character: "Truman Burbank",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTQyMTM3MTY2MF5BMl5BanBnXkFtZTcwMjk4NjA4Mg@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Laura Linney",
+      character: "Meryl Burbank / Hannah Gill",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTU1NjQ2OTI2MF5BMl5BanBnXkFtZTcwNzY5NjE4OA@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Noah Emmerich",
+      character: "Marlon",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA3NDM5MDE3NF5BMl5BanBnXkFtZTgwNzQwNjE4MDE@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Natascha McElhone",
+      character: "Lauren / Sylvia",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTk0NzI5MTYxMF5BMl5BanBnXkFtZTgwNTE3NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Ed Harris",
+      character: "Christof",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMTg0OTY4ODMyOF5BMl5BanBnXkFtZTgwNzY0NTc4NTM@._V1_UY1200_.jpg",
+    },
+    {
+      name: "Holland Taylor",
+      character: "Truman's Mother",
+      urlPhoto:
+        "https://m.media-amazon.com/images/M/MV5BMjA5NzA1NjM0NV5BMl5BanBnXkFtZTgwOTk3MzYxMDE@._V1_UY1200_.jpg",
+    },
+  ],
+};
+
+const mediaMovie = {
+  "Ready Player One": [
+    {
+      title: "Ready Player One",
+      urlPoster:
+        "https://www.rollingstone.com/wp-content/uploads/2018/06/readyplayerone-56b7d103-d459-4ff3-89ac-e6342be40e01.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=iQR8Zs0zid0",
+    },
+    {
+      title: "Van Halen - Jump",
+      urlPoster:
+        "https://i.ytimg.com/vi/SwYN7mTi6HM/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLCzSrgtGjv6e1fmxMIzXsxxwlxg7A",
+      urlMedia:
+        "https://www.youtube.com/watch?v=SwYN7mTi6HM&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR",
+    },
+    {
+      title: "a-ha - Take On Me",
+      urlPoster:
+        "https://i.ytimg.com/vi/djV11Xbc914/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAQwo9yAPdIq9l3Z7w40_sAH6_uQw",
+      urlMedia:
+        "https://www.youtube.com/watch?v=djV11Xbc914&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR&index=4",
+    },
+    {
+      title: "Bee Gees - Stayin' Alive",
+      urlPoster:
+        "https://i.ytimg.com/vi/fNFzfwLM72c/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAEJd8FLCCljKGV0DCkfHWbhZ33Xw",
+      urlMedia:
+        "https://www.youtube.com/watch?v=fNFzfwLM72c&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR&index=8",
+    },
+  ],
+  "Baby Driver": [
+    {
+      title: "Baby Driver - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=z2z857RSfhk",
+    },
+    {
+      title: "Simon & Garfunkel - Baby Driver",
+      urlPoster: "https://i.ytimg.com/vi/kIDWGj84sRo/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=kIDWGj84sRo",
+    },
+    {
+      title: "The Jon Spencer Blues Explosion - Bellbottoms",
+      urlPoster: "https://i.ytimg.com/vi/0G3yTcfV3EM/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=0G3yTcfV3EM",
+    },
+    {
+      title: "Focus - Hocus Pocus",
+      urlPoster: "https://i.ytimg.com/vi/g4ouPGGLI6Q/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=g4ouPGGLI6Q",
+    },
+  ],
+  "Mad Max: Fury Road": [
+    {
+      title: "Mad Max: Fury Road - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=hEJnMQG9ev8",
+    },
+    {
+      title: "Tom Holkenborg (Junkie XL) - Brothers in Arms",
+      urlPoster: "https://i.ytimg.com/vi/5hEM0BsaCxQ/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=5hEM0BsaCxQ",
+    },
+    {
+      title: "Tom Holkenborg (Junkie XL) - Immortan’s Theme",
+      urlPoster: "https://i.ytimg.com/vi/Zh1h49dWe2Q/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=Zh1h49dWe2Q",
+    },
+    {
+      title: "Tom Holkenborg (Junkie XL) - Escape",
+      urlPoster: "https://i.ytimg.com/vi/0C-jBBkgFJI/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=0C-jBBkgFJI",
+    },
+  ],
+  "The Mitchells vs. the Machines": [
+    {
+      title: "The Mitchells vs. the Machines - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BMjdkZjNjNDItYzc4MC00NTkxLTk1YmQtOWNjZTYxZjk0N2I5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=_akwfRuL4os",
+    },
+    {
+      title: "Mark Mothersbaugh - On the Verge of Destruction",
+      urlPoster: "https://i.ytimg.com/vi/1J8Y1p3C7kM/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=1J8Y1p3C7kM",
+    },
+    {
+      title: "The Romantics - What I Like About You",
+      urlPoster: "https://i.ytimg.com/vi/saO-Ko6v-ck/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=saO-Ko6v-ck",
+    },
+    {
+      title: "Talking Heads - Once in a Lifetime",
+      urlPoster: "https://i.ytimg.com/vi/I1wg1DNHbNU/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=I1wg1DNHbNU",
+    },
+  ],
+  "Deadpool 2": [
+    {
+      title: "Deadpool 2 - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BMjI0NTQ3NjE5Nl5BMl5BanBnXkFtZTgwNjg2ODA0NDM@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=D86RtevtfrA",
+    },
+    {
+      title: "Celine Dion - Ashes",
+      urlPoster: "https://i.ytimg.com/vi/CX11yw6YL1w/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=CX11yw6YL1w",
+    },
+    {
+      title: "Dolly Parton - 9 to 5",
+      urlPoster: "https://i.ytimg.com/vi/UbxUSsFXYo4/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=UbxUSsFXYo4",
+    },
+    {
+      title: "a-ha - Take On Me",
+      urlPoster: "https://i.ytimg.com/vi/djV11Xbc914/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=djV11Xbc914",
+    },
+  ],
+  "Kingsman: The Secret Service": [
+    {
+      title: "Kingsman: The Secret Service - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BYTM3ZTllNzItNTNmOS00NzJiLTg1MWMtMjMxNDM0NmJhODJkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=kl8F-8tR8to",
+    },
+    {
+      title: "Lynyrd Skynyrd - Free Bird",
+      urlPoster: "https://i.ytimg.com/vi/D0W1v0kOELA/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=D0W1v0kOELA",
+    },
+    {
+      title: "Dire Straits - Money for Nothing",
+      urlPoster: "https://i.ytimg.com/vi/wTP2RUD_cL0/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=wTP2RUD_cL0",
+    },
+    {
+      title: "Edward Elgar - Pomp and Circumstance",
+      urlPoster: "https://i.ytimg.com/vi/ALqOKq0C8Z8/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=ALqOKq0C8Z8",
+    },
+  ],
+  "Bullet Train": [
+    {
+      title: "Bullet Train - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BMDU2YTI0NmUtZDRmNS00NWZmLTk5YzMtMTU3ZmY5YzA2YzVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=0IOsk2Vlc4o",
+    },
+    {
+      title: "Bee Gees - Stayin' Alive",
+      urlPoster: "https://i.ytimg.com/vi/fNFzfwLM72c/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=fNFzfwLM72c",
+    },
+    {
+      title: "Engelbert Humperdinck - I'm a Better Man",
+      urlPoster: "https://i.ytimg.com/vi/0g7KawdsVSQ/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=0g7KawdsVSQ",
+    },
+    {
+      title: "Miki Asakura - La La Love (created for Bullet Train)",
+      urlPoster: "https://i.ytimg.com/vi/5M_4fF9HRiM/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=5M_4fF9HRiM",
+    },
+  ],
+  "Murder on the Orient Express": [
+    {
+      title: "Murder on the Orient Express - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BNGYxMTA0M2EtY2JmNC00YzM2LWI3NzEtMzU4MmM0M2ExNzVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=Mq4m3yAoW8E",
+    },
+    {
+      title: "Patrick Doyle - Orient Express Suite",
+      urlPoster: "https://i.ytimg.com/vi/0z1s1X0k4bQ/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=0z1s1X0k4bQ",
+    },
+    {
+      title: "Michelle Pfeiffer - Never Forget",
+      urlPoster: "https://i.ytimg.com/vi/2oZ0a_3X6zg/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=2oZ0a_3X6zg",
+    },
+    {
+      title: "Patrick Doyle - Justice",
+      urlPoster: "https://i.ytimg.com/vi/Y2F1gJWr2sM/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=Y2F1gJWr2sM",
+    },
+  ],
+  "Knives Out": [
+    {
+      title: "Knives Out - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=qGqiHJTsRkQ",
+    },
+    {
+      title: "Nathan Johnson - Knives Out! (String Quartet in G Minor)",
+      urlPoster: "https://i.ytimg.com/vi/0eD7O3v0mUg/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=0eD7O3v0mUg",
+    },
+    {
+      title: "The Rolling Stones - Sweet Virginia",
+      urlPoster: "https://i.ytimg.com/vi/1B3SHEar8gQ/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=1B3SHEar8gQ",
+    },
+    {
+      title: "Gordon Lightfoot - Sundown",
+      urlPoster: "https://i.ytimg.com/vi/A3hLqAzoDb0/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=A3hLqAzoDb0",
+    },
+  ],
+  "Now You See Me": [
+    {
+      title: "Now You See Me - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BMjMwNzMzMTQ0Ml5BMl5BanBnXkFtZTcwMzQ5NjA3OQ@@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=4Ot6R6O0Kk0",
+    },
+    {
+      title: "Brian Tyler - Now You See Me",
+      urlPoster: "https://i.ytimg.com/vi/5s9X2g1J7mA/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=5s9X2g1J7mA",
+    },
+    {
+      title: "The Chemical Brothers - Block Rockin’ Beats",
+      urlPoster: "https://i.ytimg.com/vi/LOcbhW2B6jo/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=LOcbhW2B6jo",
+    },
+    {
+      title: "Zapp & Roger - Computer Love",
+      urlPoster: "https://i.ytimg.com/vi/a1Z7aX-hnmE/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=a1Z7aX-hnmE",
+    },
+  ],
+  "The Truman Show": [
+    {
+      title: "The Truman Show - Official Trailer",
+      urlPoster:
+        "https://m.media-amazon.com/images/M/MV5BMjM2NzMzNjM2Nl5BMl5BanBnXkFtZTgwMzUyNjM5MDE@._V1_FMjpg_UX1000_.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=dlnmQbPGuls",
+    },
+    {
+      title: "Philip Glass - Truman Sleeps",
+      urlPoster: "https://i.ytimg.com/vi/4uXJ_0rWn1M/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=4uXJ_0rWn1M",
+    },
+    {
+      title: "Burkhard Dall - Father Kolbe’s Preaching",
+      urlPoster: "https://i.ytimg.com/vi/1g7z3jD0Z0k/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=1g7z3jD0Z0k",
+    },
+    {
+      title: "Philip Glass - Raising the Sail",
+      urlPoster: "https://i.ytimg.com/vi/6BAt1zY3Nds/hqdefault.jpg",
+      urlMedia: "https://www.youtube.com/watch?v=6BAt1zY3Nds",
+    },
+  ],
+};
+
 const heroMovies = [
   movies[34],
   movies[0],
@@ -1113,4 +2257,13 @@ const genres = [
   "Thriller",
 ];
 
-export { movies, heroMovies, recentMovies, nextsMovies, genres };
+export {
+  movies,
+  reviewsMovie,
+  actorsMovie,
+  mediaMovie,
+  heroMovies,
+  recentMovies,
+  nextsMovies,
+  genres,
+};

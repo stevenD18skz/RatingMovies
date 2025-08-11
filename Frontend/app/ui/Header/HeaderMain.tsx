@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeaderMain() {
   return (
-    <header className="  fixed    backdrop-blur-md backdrop-saturate-150 items-center justify-center flex py-3">
+    <header className="       backdrop-blur-md backdrop-saturate-150 items-center justify-center flex py-3">
       <Link href="/" className="flex items-center gap-2">
         <Image
           src="/Logo.png"

@@ -1,5 +1,11 @@
 import React from "react";
-import { getMovieById, getSimilarMovies } from "../../lib/moviePort";
+import {
+  getMovieById,
+  getSimilarMovies,
+  getReviewsMovie,
+  getActorByMovie,
+  getMediaByMovie,
+} from "../../lib/moviePort";
 import {
   PackageOpen,
   Home,
@@ -7,10 +13,6 @@ import {
   ArrowLeft,
   CircleArrowOutUpRight,
   Play,
-} from "lucide-react";
-import Link from "next/link";
-import { Movie } from "../../types/movie";
-import {
   ThumbsUp,
   Star,
   Clock,
@@ -19,6 +21,11 @@ import {
   Popcorn,
   MessageSquareReply,
 } from "lucide-react";
+import Link from "next/link";
+import { Movie } from "../../types/movie";
+import { Review } from "../../types/review";
+import { Actor } from "../../types/actor";
+import { Media } from "../../types/media";
 
 const RatingStars = ({
   rating,
@@ -89,16 +96,6 @@ const RatingStars = ({
   );
 };
 
-interface Review {
-  username: string;
-  date: string;
-  rating: number;
-  comment: string;
-  helpful: number;
-  replies: number;
-  avatar: string;
-}
-
 const CommentItem = ({ review }: { review: Review }) => {
   return (
     <div className="rating-container bg-[#1F2937] p-4 rounded-lg flex flex-col gap-4">
@@ -145,70 +142,6 @@ const CommentItem = ({ review }: { review: Review }) => {
   );
 };
 
-export const reviews = [
-  {
-    username: "Monkey D. Luffy",
-    date: "March 15, 2024",
-    rating: 4.2,
-    comment:
-      "A visual masterpiece that perfectly captures the spirit of gaming culture. Spielberg's direction brings the virtual world to life in spectacular fashion.",
-    helpful: 423,
-    replies: 476,
-    avatar:
-      "https://i.pinimg.com/1200x/92/23/4a/92234a0d461079114707be651ed6ff19.jpg", // ruta ficticia
-  },
-  {
-    username: "Aria Winters",
-    date: "April 2, 2024",
-    rating: 3.8,
-    comment:
-      "Incredible visuals and a nostalgic trip for gamers. The pacing dipped a little in the middle, but overall an amazing experience.",
-    helpful: 312,
-    replies: 189,
-    avatar:
-      "https://i.pinimg.com/736x/08/da/ce/08dace7744930a8b0ef546d9cad6c3ec.jpg",
-  },
-  {
-    username: "Kai Tanaka",
-    date: "April 20, 2024",
-    rating: 4.5,
-    comment:
-      "One of the best movie adaptations of a novel I've ever seen. Perfect blend of action, emotion, and geek culture.",
-    helpful: 540,
-    replies: 298,
-    avatar:
-      "https://i.pinimg.com/736x/40/4a/9c/404a9c078184881d9420234f878217a5.jpg",
-  },
-  {
-    username: "Sofia Delgado",
-    date: "May 5, 2024",
-    rating: 3.4,
-    comment:
-      "Great cast, exciting action scenes, and a fun story. Some references felt forced, but I still loved it.",
-    helpful: 276,
-    replies: 143,
-    avatar:
-      "https://i.pinimg.com/1200x/54/68/a8/5468a8e62ff5867b60407fa0dfa278d4.jpg",
-  },
-  {
-    username: "Ethan Clarke",
-    date: "May 20, 2024",
-    rating: 4.6,
-    comment:
-      "The soundtrack and visuals blew me away. Felt like I was part of the OASIS myself!",
-    helpful: 390,
-    replies: 205,
-    avatar:
-      "https://i.pinimg.com/736x/66/0f/c4/660fc432fe037cfeb16a1c907c896389.jpg",
-  },
-];
-
-interface Actor {
-  name: string;
-  character: string;
-  urlPhoto: string;
-}
-
 const ActorItem = ({ actor }: { actor: Actor }) => {
   return (
     <div className="flex flex-col items-center">
@@ -223,51 +156,6 @@ const ActorItem = ({ actor }: { actor: Actor }) => {
   );
 };
 
-export const castAndCrew = [
-  {
-    name: "Tye Sheridan",
-    character: "Wade Watts / Parzival",
-    urlPhoto:
-      "https://tse4.mm.bing.net/th/id/OIP.8RogcCGpSZtH5LKe9zaX5gHaJ3?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    name: "Olivia Cooke",
-    character: "Samantha Cook / Art3mis",
-    urlPhoto:
-      "https://tse1.mm.bing.net/th/id/OIP.qVzhNpjuGo_O5qCOecdtGAHaK2?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    name: "Ben Mendelsohn",
-    character: "Nolan Sorrento",
-    urlPhoto:
-      "https://tse4.mm.bing.net/th/id/OIP.NFIVqNRG3SG6UscKyywknAHaJ_?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    name: "Mark Rylance",
-    character: "James Halliday / Anorak",
-    urlPhoto:
-      "https://tse4.mm.bing.net/th/id/OIP.OMjKsfPCKq8Z_QHjZnXHUQHaLA?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-  {
-    name: "Simon Pegg",
-    character: "Curator",
-    urlPhoto:
-      "https://m.media-amazon.com/images/M/MV5BNzMwODE1NjA3OV5BMl5BanBnXkFtZTgwNTY5MzM2OTE@._V1_FMjpg_UX1000_.jpg",
-  },
-  {
-    name: "T. J. Miller",
-    character: "I-ROK",
-    urlPhoto:
-      "https://tse4.mm.bing.net/th/id/OIP.s-jPNwVzq6FctX7yZTy4cQHaJ4?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
-  },
-];
-
-interface Media {
-  title: string;
-  ulrPoster: string;
-  urlMedia: string;
-}
-
 const MediaItem = ({ media }: { media: Media }) => {
   return (
     <a
@@ -276,7 +164,7 @@ const MediaItem = ({ media }: { media: Media }) => {
       className="relative group hover:scale-110 transition-all duration-300 hover:shadow-2xl rounded-xl w-[30rem]  "
     >
       <img
-        src={media.ulrPoster}
+        src={media.urlPoster}
         alt=""
         className="h-full w-full group-hover:brightness-110 transition-all duration-300"
       />
@@ -292,48 +180,17 @@ const MediaItem = ({ media }: { media: Media }) => {
   );
 };
 
-const mediaReadyPlayerOne: Media[] = [
-  {
-    title: "Ready Player One",
-    ulrPoster:
-      "https://www.rollingstone.com/wp-content/uploads/2018/06/readyplayerone-56b7d103-d459-4ff3-89ac-e6342be40e01.jpg",
-    urlMedia: "https://www.youtube.com/watch?v=iQR8Zs0zid0",
-  },
-  {
-    title: "Van Halen - Jump",
-    ulrPoster:
-      "https://i.ytimg.com/vi/SwYN7mTi6HM/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLCzSrgtGjv6e1fmxMIzXsxxwlxg7A",
-    urlMedia:
-      "https://www.youtube.com/watch?v=SwYN7mTi6HM&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR",
-  },
-  {
-    title: "a-ha - Take On Me",
-    ulrPoster:
-      "https://i.ytimg.com/vi/djV11Xbc914/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAQwo9yAPdIq9l3Z7w40_sAH6_uQw",
-    urlMedia:
-      "https://www.youtube.com/watch?v=djV11Xbc914&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR&index=4",
-  },
-  {
-    title: "Bee Gees - Stayin' Alive",
-    ulrPoster:
-      "https://i.ytimg.com/vi/fNFzfwLM72c/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAEJd8FLCCljKGV0DCkfHWbhZ33Xw",
-    urlMedia:
-      "https://www.youtube.com/watch?v=fNFzfwLM72c&list=PL93gQNIoJIvXjoA4GhU7KghbRRLaQY9MR&index=8",
-  },
-];
-
-interface PageProps {
-  params: Promise<{ movie: string }>;
-}
-
 export default async function Page({ params }: PageProps) {
   // Espera a que se resuelvan los parámetros
   const resolvedParams = await params;
   const movieId = decodeURIComponent(resolvedParams.movie);
 
   const movie: Movie | null = await getMovieById(movieId);
+  const reviewOfMovie: Review[] | null = await getReviewsMovie(movieId);
+  const actorsOfMovie: Actor[] | null = await getActorByMovie(movieId);
+  const mediaOfMovie: Media[] | null = await getMediaByMovie(movieId);
 
-  if (!movie) {
+  if (!movie || !reviewOfMovie || !actorsOfMovie || !mediaOfMovie) {
     return (
       <div className="bg-[#0F172A] min-h-screen">
         <div className="flex flex-col items-center justify-center min-h-screen py-16 px-4">
@@ -548,8 +405,8 @@ export default async function Page({ params }: PageProps) {
                 </a>
               </div>
 
-              {reviews.slice(0, 3).map((review2, idx) => (
-                <CommentItem key={idx} review={review2} />
+              {reviewOfMovie.slice(0, 3).map((review, idx) => (
+                <CommentItem key={idx} review={review} />
               ))}
             </div>
           </div>
@@ -664,8 +521,8 @@ export default async function Page({ params }: PageProps) {
         <div className="px-4 py-6">
           <h3 className="text-4xl font-bold">Cast</h3>
 
-          <div className="flex gap-6 ">
-            {castAndCrew.map((actor) => (
+          <div className="flex gap-6">
+            {actorsOfMovie.map((actor) => (
               <ActorItem key={actor.name} actor={actor} />
             ))}
           </div>
@@ -676,7 +533,7 @@ export default async function Page({ params }: PageProps) {
           <h3 className="text-4xl font-bold">Media</h3>
 
           <div className="flex gap-8 ">
-            {mediaReadyPlayerOne.map((media) => (
+            {mediaOfMovie.map((media) => (
               <MediaItem key={media.title} media={media} />
             ))}
           </div>
@@ -717,4 +574,8 @@ export default async function Page({ params }: PageProps) {
       </div>
     </div>
   );
+}
+
+interface PageProps {
+  params: Promise<{ movie: string }>;
 }
